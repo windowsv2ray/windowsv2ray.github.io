@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
     <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
     <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
-    
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -84,7 +83,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>数据类型：number、string、boolean、null、undefined、object</p> <h4><a id="1_number__string_1" rel="nofollow"></a>1. number ==&gt; string</h4> <p>+‘’ 、String(number) 、number.toString()</p> <pre><code>var a=12; var b=13; console.log(a+''+b,typeof(a+''+b)) /* 1213 string  */ console.log(a.toString()+b,typeof(a.toString()+b)); /* 1213 string */ console.log(String(a)+11,typeof (String(a)+11)); /* 1211 string */</code></pre> <h4><a id="2_string__number_11" rel="nofollow"></a>2. string ==&gt; number</h4> <p>Number()、+string、-string、parseFloat(s) 保留全部<br /> ~~string、parseInt(s) 只保留整数</p> <pre><code>var s1='12.9'; console.log(parseInt(s1)+1); /* 13 */ console.log(parseFloat(s1)+1);  /* 13.9 */ console.log(Number(s1)+1); /* 13.9 */   var s3='12.9'; console.log(+s3+1); /* 13.9 */ console.log(-s3+1); /* 11.9 */ console.log(~~s3); /* 12 */</code></pre> <p>Number() 和 parseFloat() 区别：</p> <pre><code>var s2='12.9abc'; console.log(parseFloat(s2)); /* 12.9 */ console.log(Number(s2)); /* NaN ： not a number 非数字*/</code></pre> <p><strong>ps：不过NaN为number的一种，即typeof NaN为number</strong><br /> 注意NaN的特殊：</p> <pre><code>console.log(Number==Number); /* true */ console.log(null==null);  /* true */ console.log(undefined==undefined); /* true */ console.log(NaN==NaN); /* false */ console.log(typeof NaN); /* number */</code></pre> <h4><a id="3_numberstring__boolean_44" rel="nofollow"></a>3. number、string ==&gt; boolean</h4> <p>Boolean()、!!number/string</p> <pre><code>var a=0,b=1,s1='',s2='hello',s3=null,s4=undefined; console.log(Boolean(a)); /* false */ console.log(Boolean(b)); /* true */ console.log(Boolean(s1)); /* false */ console.log(Boolean(s2)); /* true */ console.log(Boolean(s3)); /* false */ console.log(Boolean(s4)); /* false */ console.log(!!b); /* true */ console.log(!!s4); /* false */</code></pre> <h4><a id="4_boolean_number_59" rel="nofollow"></a>4. boolean==&gt; number</h4> <pre><code>console.log(false+1); /* 1 */ console.log(true+1); /* 2 */</code></pre> <h4><a id="5__65" rel="nofollow"></a>5. 注意</h4> <p>【有些想测试的还没测。。。感兴趣的可以测一下】</p> <pre><code>console.log(undefined); /* undefined */ console.log(null); /* null */ console.log(undefined==null); /* true */ console.log(undefined==false); /* false */ console.log(!!undefined==false); /* true */ console.log(NaN==NaN); /* false */</code></pre> <blockquote> <p>【解释为什么console.log(undefined<mark>null); /* true */】（有的说undefined</mark>null是因为null为object，而undefined为类型，是null一特殊存在，不过好像最初是这样用，现在摒弃了。。。但不确定这样说对不对。。。）<br /><strong>null</strong> 表示 “没有对象”，即该处不应该有值（典型用法：（1）作为函数的参数，表示该函数的参数不是对象；（2）作为对象原型链的终点。（这里不是很懂QAQ。。。））<br /><strong>undefined</strong>表示“缺少值“，即此处该有个值，但是没有定义（典型用法：（1）变量被声明了，但没有赋值时，就等于undefined；（2）调用函数时，应该提供的参数没有提供，该参数等于undefined；（3）对象没有赋值的属性，该属性的值为undefined；（4）函数没有返回值时，默认返回undefined）</p> </blockquote> </div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>数据类型：number、string、boolean、null、undefined、object</p> <h4><a id="1_number__string_1" rel="nofollow"></a>1. number ==&gt; string</h4> <p>+‘’ 、String(number) 、number.toString()</p> <pre><code>var a=12; var b=13; console.log(a+''+b,typeof(a+''+b)) /* 1213 string  */ console.log(a.toString()+b,typeof(a.toString()+b)); /* 1213 string */ console.log(String(a)+11,typeof (String(a)+11)); /* 1211 string */</code></pre> <h4><a id="2_string__number_11" rel="nofollow"></a>2. string ==&gt; number</h4> <p>Number()、+string、-string、parseFloat(s) 保留全部<br /> ~~string、parseInt(s) 只保留整数</p> <pre><code>var s1='12.9'; console.log(parseInt(s1)+1); /* 13 */ console.log(parseFloat(s1)+1);  /* 13.9 */ console.log(Number(s1)+1); /* 13.9 */   var s3='12.9'; console.log(+s3+1); /* 13.9 */ console.log(-s3+1); /* 11.9 */ console.log(~~s3); /* 12 */</code></pre> <p>Number() 和 parseFloat() 区别：</p> <pre><code>var s2='12.9abc'; console.log(parseFloat(s2)); /* 12.9 */ console.log(Number(s2)); /* NaN ： not a number 非数字*/</code></pre> <p><strong>ps：不过NaN为number的一种，即typeof NaN为number</strong><br /> 注意NaN的特殊：</p> <pre><code>console.log(Number==Number); /* true */ console.log(null==null);  /* true */ console.log(undefined==undefined); /* true */ console.log(NaN==NaN); /* false */ console.log(typeof NaN); /* number */</code></pre> <h4><a id="3_numberstring__boolean_44" rel="nofollow"></a>3. number、string ==&gt; boolean</h4> <p>Boolean()、!!number/string</p> <pre><code>var a=0,b=1,s1='',s2='hello',s3=null,s4=undefined; console.log(Boolean(a)); /* false */ console.log(Boolean(b)); /* true */ console.log(Boolean(s1)); /* false */ console.log(Boolean(s2)); /* true */ console.log(Boolean(s3)); /* false */ console.log(Boolean(s4)); /* false */ console.log(!!b); /* true */ console.log(!!s4); /* false */</code></pre> <h4><a id="4_boolean_number_59" rel="nofollow"></a>4. boolean==&gt; number</h4> <pre><code>console.log(false+1); /* 1 */ console.log(true+1); /* 2 */</code></pre> <h4><a id="5__65" rel="nofollow"></a>5. 注意</h4> <p>【有些想测试的还没测。。。感兴趣的可以测一下】</p> <pre><code>console.log(undefined); /* undefined */ console.log(null); /* null */ console.log(undefined==null); /* true */ console.log(undefined==false); /* false */ console.log(!!undefined==false); /* true */ console.log(NaN==NaN); /* false */</code></pre> <blockquote> <p>【解释为什么console.log(undefined<mark>null); /* true */】（有的说undefined</mark>null是因为null为object，而undefined为类型，是null一特殊存在，不过好像最初是这样用，现在摒弃了。。。但不确定这样说对不对。。。）<br /><strong>null</strong> 表示 “没有对象”，即该处不应该有值（典型用法：（1）作为函数的参数，表示该函数的参数不是对象；（2）作为对象原型链的终点。（这里不是很懂QAQ。。。））<br /><strong>undefined</strong>表示“缺少值“，即此处该有个值，但是没有定义（典型用法：（1）变量被声明了，但没有赋值时，就等于undefined；（2）调用函数时，应该提供的参数没有提供，该参数等于undefined；（3）对象没有赋值的属性，该属性的值为undefined；（4）函数没有返回值时，默认返回undefined）</p> </blockquote> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-22530.htm">宠物饲料营销方案（宠物饲料营销方案模板）</a></p>
                                         <p>下一个：<a href="/news/article-22988.htm">瑞鹏宠物医院总店（瑞鹏宠物医院总店电话）</a></p>
@@ -97,16 +97,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-6-14-free-clash-subscribe.htm" title="「6月14日」最高速度19.6M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「6月14日」最高速度19.6M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-21608.htm" title="开宠物店难吗（开宠物店难吗赚钱吗）">开宠物店难吗（开宠物店难吗赚钱吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-9-clash-v2ray-ss-ssr.htm" title="「8月9日」最高速度21.4M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「8月9日」最高速度21.4M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-12-clash-node-daily-updates.htm" title="「8月12日」最高速度20.4M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「8月12日」最高速度20.4M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-6-4-node-share.htm" title="「6月4日」最高速度21.5M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「6月4日」最高速度21.5M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-7-11-free-subscribe-node.htm" title="「7月11日」最高速度21M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「7月11日」最高速度21M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-23-free-v2ray.htm" title="「8月23日」最高速度21.6M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「8月23日」最高速度21.6M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-26-node-share-links.htm" title="「10月26日」最高速度19M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「10月26日」最高速度19M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-15-node-share-links.htm" title="「10月15日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「10月15日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-7-18-free-node-subscribe-links.htm" title="「7月18日」最高速度22.4M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「7月18日」最高速度22.4M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-5-free-node-subscribe.htm" title="「6月5日」最高速度19.4M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「6月5日」最高速度19.4M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-27-clash-node-daily-updates.htm" title="「7月27日」最高速度21.8M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「7月27日」最高速度21.8M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-25-free-shadowrocket-node.htm" title="「10月25日」最高速度19.4M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「10月25日」最高速度19.4M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-8-node-share.htm" title="「8月8日」最高速度21.1M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「8月8日」最高速度21.1M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22071.htm" title="动物防疫法的重要性（动物防疫法的目的是什么）">动物防疫法的重要性（动物防疫法的目的是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-26701.htm" title="2021公务员国考报名及考试时间（2022年公务员国考考试报名时间）">2021公务员国考报名及考试时间（2022年公务员国考考试报名时间）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-free-ssr-subscribe.htm" title="「12月16日」最高速度20.2M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「12月16日」最高速度20.2M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-28-clash-node-daily-updates.htm" title="「10月28日」最高速度21.3M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「10月28日」最高速度21.3M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26702.htm" title="狗粮颗粒机小型型号大全（狗粮颗粒饲料配方大全）">狗粮颗粒机小型型号大全（狗粮颗粒饲料配方大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-21-free-v2ray-subscribe.htm" title="「6月21日」最高速度23M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「6月21日」最高速度23M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -118,7 +118,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -154,6 +154,15 @@
             <div class="row">
                 <div class="col-sm-6 py-2">
                     <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                         Windows V2ray分享订阅站 版权所有 Powered by WordPress
                     </p>
                 </div>
