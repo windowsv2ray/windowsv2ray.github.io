@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-30443.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>java之Arrays工具类的使用</title>
+        <meta name="description" content="Arrays 是JDK提供的操作数组的工具类，array类提供了动态创建和访问 Java 数组的方法。 arrays此类包含用来操作数组（比如排序和搜索）的各种方法。此类还包含一个允许将数组作为列表来" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">java之Arrays工具类的使用</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>Arrays 是JDK提供的操作数组的工具类，array类提供了动态创建和访问 Java 数组的方法。<br /> arrays此类包含用来操作数组（比如排序和搜索）的各种方法。此类还包含一个允许将数组作为列表来查看的静态工厂。主要有一下几种用法。<br /> 首先声明几个数组：</p> <pre><code>				int a[]={20,3,32,1,72,26,35}; 				int b[]={3,5,7,8,54,23,9}; 				int c[]={3,5,7,8,54,23,9};</code></pre> <p>1.数组转换字符串</p> <pre><code>				System.out.println("转换前："+a); 				//数组转换字符串 				String str=Arrays.toString(a);        				System.out.println("转换为字符串："+str);</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/ba49779d41fc21d1779f65acd85a19a7.jpg" alt="java之Arrays工具类的使用"><br /> 2.对数组进行升序排列</p> <pre><code>				//对数组array的元素进行升序排列 				System.out.println("原数组："+Arrays.toString(a)); 				Arrays.sort(a);                       				System.out.println("排序后："+Arrays.toString(a));</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/69bcc08d1a843881e3e2f8f6b43041b3.jpg" alt="java之Arrays工具类的使用"><br /> 3.所有元素赋特定值</p> <pre><code>				//所以元素都赋成特定值 				System.out.println("赋值前："+Arrays.toString(a)); 				Arrays.fill(a,10);   				System.out.println("赋值后："+Arrays.toString(a));</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/dde26e30c01b53416aaa2769ebd6aa7d.jpg" alt="java之Arrays工具类的使用"><br /> 4.判断数组是否相等</p> <pre><code>				//判断两个数组是否相等(对应位置上的元素是否相等) 				boolean boo=Arrays.equals(a,b);       				boolean boo2=Arrays.equals(b, c); 				System.out.println("a:"+Arrays.toString(a)); 				System.out.println("b:"+Arrays.toString(b)); 				System.out.println("c:"+Arrays.toString(c)); 				System.out.println("a与b是否相等？"+boo); 				System.out.println("b与c是否相等？"+boo2);</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/6d164c70f081d1e5ae48726b24c3c764.jpg" alt="java之Arrays工具类的使用"><br /> 5.对数组复制</p> <pre><code>				//把数组复制成特定长度的数组 				int d[]=Arrays.copyOf(b,b.length);    				System.out.println("d:"+Arrays.toString(d)); 				System.out.println("b:"+Arrays.toString(b));</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/9df6766d60e996c6e539f9cf11ecfa89.jpg" alt="java之Arrays工具类的使用"><br /> 6.查询数组下标</p> <pre><code>				//查询数组下标 				int i=Arrays.binarySearch(b, 5);      				System.out.println("数组b第5个数字下标是："+i);</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/02572647d059aef4f3c03c749cfe0fcc.jpg" alt="java之Arrays工具类的使用"><br /> 7.数组转换成集合</p> <pre><code>				//数组转换成字符串 				String str = Arrays.toString(a); 				//字符串转换成集合 				List&lt;String&gt; list = Arrays.asList(str); 				for (int i = 0; i &lt; list.size(); i++) { 					System.out.println("转换后的List集合："+list.get(i)); 				}</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/91972a9da5027f8a5ab3854d8cae691a.jpg" alt="java之Arrays工具类的使用"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30442.htm">pyspark读取和存入数据的三种方法</a></p>
+                                        <p>下一个：<a href="/news/article-30908.htm">kafka正常启动，但是几秒后停止运行</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-8-22-free-ssr-subscribe.htm" title="「8月22日」最高速度22.2M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「8月22日」最高速度22.2M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20234.htm" title="Spring Security认证_认证（成功和失败）后的处理方式">Spring Security认证_认证（成功和失败）后的处理方式</a></li>
+                        <li class="py-2"><a href="/news/article-22988.htm" title="瑞鹏宠物医院总店（瑞鹏宠物医院总店电话）">瑞鹏宠物医院总店（瑞鹏宠物医院总店电话）</a></li>
+                        <li class="py-2"><a href="/news/article-22529.htm" title="宠物美容师多少钱一个月上海（上海宠物美容师培训）">宠物美容师多少钱一个月上海（上海宠物美容师培训）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-11-clash-node-daily-updates.htm" title="「8月11日」最高速度20M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「8月11日」最高速度20M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-15-node-share-links.htm" title="「10月15日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「10月15日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22530.htm" title="宠物饲料营销方案（宠物饲料营销方案模板）">宠物饲料营销方案（宠物饲料营销方案模板）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-21-node-share.htm" title="「9月21日」最高速度21.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「9月21日」最高速度21.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-21-free-ssr-node.htm" title="「12月21日」最高速度19.7M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「12月21日」最高速度19.7M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-clash-v2ray-ss-ssr.htm" title="「11月25日」最高速度21.9M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「11月25日」最高速度21.9M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
