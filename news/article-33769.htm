@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-33769.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>什么是Java 9中的Project Jigsaw</title>
+        <meta name="description" content="Jigsaw项目的主要目标是引入模块化概念，以Java 9创建模块，然后将其应用于JDK。 以下是模块化（拼图）的一些好处   强大的封装能力：这些模块只能访问那些可以使用的部件。除非将包显式导出到&" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">什么是Java 9中的Project Jigsaw</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p><strong>Jigsaw</strong><strong>项目</strong>的主要目标是引入<strong>模块化</strong>概念，以Java 9创建模块，然后将其应用于<strong>JDK</strong>。</p> <p>以下是<strong>模块化</strong>（<strong>拼图</strong>）的一些好处</p> <ul class="list-paddingleft-2"> <li> <p><strong>强大的封装能力：</strong>这些模块只能访问那些可以使用的部件。除非将包显式导出到<strong>&nbsp;module-info.java</strong>文件中，否则包中的公共类不能是公共的。</p> </li> <li> <p><strong>明确的依赖关系：</strong>一个模块必须声明有关通过必需子句使用的其他模块的信息。组合模块以创建较短的运行时间，可以将其轻松扩展到相对较小的计算设备。</p> </li> <li> <p><strong>可靠：</strong>消除<strong>运行时错误后</strong>，该应用程序将变得更加可靠。例如，我们必须注意到，由于缺少导致<strong>ClassNotFoundException的</strong>类，我们的应用程序在运行时会失败。</p> </li> </ul> <p></p> <p>以下是作为<strong>Jigsaw</strong>项目一部分的各种<strong>JEP</strong>（JDK增强建议）<strong></strong></p> <p><strong>JEP 200</strong> –<strong>模块化JDK：</strong>它利用Java平台模块系统（<strong>JPMS</strong>）将JDK模块化为一组在构建时，编译时或运行时结合在一起的模块。</p> <p><strong>JEP 201</strong> –<strong>模块化源代码</strong>：它将JDK的源代码模块化为模块，并升级内置工具以编译模块。</p> <p><strong>JEP 220</strong> –<strong>模块化运行时映像</strong>：它有助于重组JRE和JDK运行时映像，以容纳用于提高<strong>安全性</strong>，<strong>性能</strong>和<strong>可维护性的</strong>模块&nbsp;。</p> <p><strong>JEP 260 –封装了大多数内部API：</strong>它允许直接访问或通过反射访问大多数内部API。访问将要更改的内部API的风险很大。为防止使用此功能，将其压缩到<strong>模块中，</strong>并且只有那些内部API可供使用。</p> <p><strong>JEP 261 –模块系统：</strong>它负责通过更改JVM，Java编程语言和其他标准API来实现模块系统Java规范。</p> <p><strong>JEP 282-Jlink，Java链接器：</strong>它允许将模块及其依赖性打包到较小的运行时中。</p> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-33318.htm">吉泰宠物医院电话多少（吉康宠物医院）</a></p>
+                                        <p>下一个：<a href="/news/article-33770.htm">docker-compose常用命令及yml文件编写</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-20696.htm" title="兽用疫苗经营许可证需要什么条件（兽用疫苗销售资质）">兽用疫苗经营许可证需要什么条件（兽用疫苗销售资质）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-19-node-share.htm" title="「8月19日」最高速度20M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「8月19日」最高速度20M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-free-clash-subscribe.htm" title="「11月10日」最高速度22.2M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接">「11月10日」最高速度22.2M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-8-free-clash.htm" title="「6月8日」最高速度19M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「6月8日」最高速度19M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-clash-windows.htm" title="「12月14日」最高速度20.8M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「12月14日」最高速度20.8M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-node-share-links.htm" title="「11月22日」最高速度18.2M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「11月22日」最高速度18.2M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-19-clash-windows.htm" title="「12月19日」最高速度19.9M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接">「12月19日」最高速度19.9M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-shadowrocket-node.htm" title="「12月5日」最高速度21M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「12月5日」最高速度21M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-7-shadowrocket-node.htm" title="「10月7日」最高速度18.9M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「10月7日」最高速度18.9M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-13-free-high-speed-nodes.htm" title="「8月13日」最高速度21.7M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「8月13日」最高速度21.7M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
