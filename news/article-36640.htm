@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-36640.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>php代码审计之——phpstorm动态调试</title>
+        <meta name="description" content="xdebug调试 调试环境部署 xdebug的版本需要与PHP版本相对于，所以不要轻易改变PHP环境版本。 0 配置php解析器  1 下载对应版本的xdebug xdebug官网下载地址：https" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">php代码审计之——phpstorm动态调试</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2 id="xdebug调试">xdebug调试</h2> <h3 id="调试环境部署">调试环境部署</h3> <p>xdebug的版本需要与PHP版本相对于，所以不要轻易改变PHP环境版本。</p> <h4 id="0-配置php解析器">0 配置php解析器</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/e8e39122bcd485d94e8c8ea9cfbdaf29.jpg" alt="php代码审计之——phpstorm动态调试"></p> <h4 id="1-下载对应版本的xdebug">1 下载对应版本的xdebug</h4> <p>xdebug官网下载地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://xdebug.org/download.php"  target="_blank" rel="nofollow">https://xdebug.org/download.php</a></p> <p>你需要仔细分析和选择要下载的对应版本，否则无法调试。由于非常容易出错，建议采用下面这种简单方法：</p> <p>xdebug网站提供一个自动分析你系统对应的xdebug版本的页面，网址是<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://xdebug.org/wizard.php"  target="_blank" rel="nofollow">https://xdebug.org/wizard.php</a></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/417aa09994022d3f658e83c8f967e351.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>在页面中需要粘贴进去php版本信息，也就是phpinfo()函数的信息，如下图：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/f1971d92b906807a08359b8bcc49d3f9.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>ctrl+A全选这个页面的信息，然后粘贴到第一个图片的页面中。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/be4754d0f936ebe5ce04cc0ba1a6d752.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>点击 analyse my phpinfo() output 按钮</p> <p>将下载的DLL文件拷贝到指定目录，按照页面上的提示即可</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/270e5af6c86124cdd7b3018c28654a58.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/8bbf8fd65532926aaf79fb75c4e15dbe.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>到此为止，xdebug的下载和启用就完成了，重新运行 phpinfo.php</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/42c15baffb40abd86e690451bb9f5cfc.jpg" alt="php代码审计之——phpstorm动态调试"></p> <h4 id="2-修改phpini文件里的xdebug配置项">2 修改php.ini文件里的xdebug配置项</h4> <p><strong>xdebug2:</strong></p> <pre><code class="language-php">[XDebug] xdebug.profiler_output_dir="C:\phpstudy2018\PHPTutorial\tmp\xdebug" xdebug.trace_output_dir="C:\phpstudy2018\PHPTutorial\tmp\xdebug" zend_extension = "C:\phpstudy2018\PHPTutorial\php\php-7.2.1-nts\ext\php_xdebug.dll"  xdebug.profiler_append = 0 xdebug.profiler_enable = 1 xdebug.profiler_enable_trigger = 0 ;开启远程调试 xdebug.remote_enable = 1 ;客户机xdebug调试协议 xdebug.remote_handler = "dbgp" xdebug.remote_mode = "req" xdebug.remote_host=127.0.0.1 ;xdebug.remote_port默认值为9000，这里需要跟phpstorm配置一致，下面有说明 xdebug.remote_port=9000 ;idekey 区分大小写 xdebug.idekey="PHPSTORM"</code></pre> <p><strong>xdebug3:</strong></p> <pre><code class="language-php">[xdebug] zend_extension = "C:\phpstudy2018\PHPTutorial\php\php-7.2.1-nts\ext\php_xdebug.dll" xdebug.mode= "debug"			 #性能分析文件存放位置  xdebug.output_dir = "C:\phpstudy2018\PHPTutorial\tmp\xdebug" 	 #步骤调试器，应该是步入步进步出的吧 xdebug.remote_handler = "dbgp" 	 xdebug.idekey="PHPSTORM" xdebug.start_with_request = yes  #由remote_host替换过来了，就写本机的就行 xdebug.client_host=127.0.0.1 		 #由remote_port替换过来了，调试端口 xdebug.client_port=9000</code></pre> <h4 id="3-配置phpstorm">3 配置phpstorm</h4> <p>Ctrl+Alt+S快捷键打开设置，搜索xdebug，其中的Debug port确保不被其他应用占用，当程序无法进入断点时，可以考虑是否有其他应用占用了你本地的9000端口。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/c849874531c9a326150be69c9e345539.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>在DBGp Proxy中配置你的idekey，idekey和在php.ini配置文件中xdebug.idekey项的值一样，host是你的服务器ip或域名</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/de3e70b47b684e98f254177aaa18a0cb.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>【File】 -&gt;【Settings】 -&gt;【Languages &amp; Frameworks】 -&gt;【PHP】的servers中配置xdebug服务</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/25c6c04c44124eca219c12da36d91dfc.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>测试一下配置是否成功</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/560b0ac7d998ee5d37fb186e88ea66bc.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>（如果不成功，根据报错去修改）</p> <h4 id="4-第一个调试">4 第一个调试</h4> <p><strong>调试使用：</strong></p> <p>新建一个运行调试配置</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/626dbf3ddad7ab3ea8930754e508cca0.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>新建php web page页面</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/a865c7414e59c7e5699fd461f85838dd.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>照着这样填就好了。</p> <p><strong>开始调试：</strong></p> <p>设置断点，开启debug监听。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/ce4e2b570468067063e295b21e766f09.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>点击绿色的甲壳虫开始调试。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/32fadfedf114e46494e7732ee85a75ea.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>红色圆中有个对号，是说明改断点生效了</p> <p>即可看到调试数据在下方显示。</p> <h3 id="补充--xdebug-helper插件">补充--xdebug helper插件</h3> <p>使用该插件主要是为了弥补xdebug本身的局限，直接使用phpstorm xdebug调试的话，设置的断点需要每次都重头运行到断点处，而不能灵活的终止或者其他操作<br /> xdebug helper就可以实现这个功能。需要终止的时候选择disable选项即可，而不需要从头开始。</p> <p>安装使用：</p> <p>直接搜索xdebug helper。安装成功后右键进入扩展选项</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/702baf634919b3531b20823e1d386ce8.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p>然后，前面正常配置</p> <p>浏览器开启debug，发包即可</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/50dbd4b65283d9bbb3f33fab26f494af.jpg" alt="php代码审计之——phpstorm动态调试"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/3ffbf0e5de7079ca5529760199b2d591.jpg" alt="php代码审计之——phpstorm动态调试"></p> <h2 id="参考">参考</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/yinhangbbbbb/article/details/79247331"  target="_blank" rel="nofollow">https://blog.csdn.net/yinhangbbbbb/article/details/79247331</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/lightsrs/p/9612409.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/lightsrs/p/9612409.html</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/beidaxmf/p/14527335.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/beidaxmf/p/14527335.html</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-35950.htm">沈阳宠物领养基地（沈阳宠物犬领养）</a></p>
+                                        <p>下一个：<a href="/news/article-36643.htm">深圳宠物领养中心 免费政策 深圳宠物领养中心 免费政策最新</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31291.htm" title="2022国考公务员报名人数统计（2022年国考公务员岗位报名人数）">2022国考公务员报名人数统计（2022年国考公务员岗位报名人数）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-26-free-subscribe-node.htm" title="「12月26日」最高速度19.8M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「12月26日」最高速度19.8M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-25-free-shadowrocket-node.htm" title="「10月25日」最高速度19.4M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「10月25日」最高速度19.4M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-clash-node.htm" title="「12月27日」最高速度21M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接">「12月27日」最高速度21M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-34964.htm" title="动物美容院简笔画（动物美容师哪里有培训）">动物美容院简笔画（动物美容师哪里有培训）</a></li>
+                        <li class="py-2"><a href="/news/article-33770.htm" title="docker-compose常用命令及yml文件编写">docker-compose常用命令及yml文件编写</a></li>
+                        <li class="py-2"><a href="/news/article-34725.htm" title="Robinhood基于Apache Hudi的下一代数据湖实践">Robinhood基于Apache Hudi的下一代数据湖实践</a></li>
+                        <li class="py-2"><a href="/news/article-29017.htm" title="宠物领养中心官网网址是什么呢（宠物领养中心app）">宠物领养中心官网网址是什么呢（宠物领养中心app）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-free-node-subscribe.htm" title="「12月17日」最高速度21M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接">「12月17日」最高速度21M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-2-free-node-subscribe.htm" title="「11月2日」最高速度20.9M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接">「11月2日」最高速度20.9M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
