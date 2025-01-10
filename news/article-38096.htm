@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-38096.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Redis6通信协议升级至RESP3，一口气看完13种新数据类型</title>
+        <meta name="description" content="在前面的文章Redis：我是如何与客户端进行通信的&nbsp;中，我们介绍过RESP V2版本协议的规范，RESP的全程是Redis Serialization Protocol，基于这个实现简单且解" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">Redis6通信协议升级至RESP3，一口气看完13种新数据类型</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				 <p>在前面的文章<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://mp.weixin.qq.com/s/3YiQGDHpLl3Zcrsw_kr0tQ"  target="_blank">Redis：我是如何与客户端进行通信的</a>&nbsp;中，我们介绍过RESP V2版本协议的规范，RESP的全程是<code>Redis Serialization Protocol</code>，基于这个实现简单且解析性能优秀的通信协议，Redis的服务端与客户端可以通过底层命令的方式进行数据的通信。</p> <p>随着Redis版本的不断更新以及功能迭代，RESP V2协议开始渐渐无法满足新的需求，为了适配在Redis6.0中出现的一些新功能，在它的基础上发展出了全新的下一代RESP3协议。</p> <p>下面我们先来回顾一下继承自RESP V2的5种数据返回类型，在了解这些类型的局限性后，再来看看RESP3中新的数据返回类型都在什么地方做出了改进。</p> <h2>继承RESP v2的类型</h2> <p>首先，协议中数据的请求格式与RESP V2完全相同，请求的格式如下：</p> <pre><code>*&lt;参数数量&gt; CRLF $&lt;参数1的字节长度&gt; CRLF &lt;参数1的数据&gt; CRLF $&lt;参数2的字节长度&gt; CRLF &lt;参数2的数据&gt; CRLF ... $&lt;参数N的字节长度&gt; CRLF &lt;参数N的数据&gt; CRLF</code></pre> <p>每行末尾的<code>CRLF</code>转换成程序语言是<code>\r\n</code>，也就是回车加换行。以<code>set name hydra</code>这条命令为例，转换过程及转换后的结果如下：</p> <p></p> <p>在了解了发送的协议后，下面对不同类型的回复进行测试。这一过程如何进行模拟呢？在前面的文章中，我们是在java代码中通过<code>Socket</code>连接redis服务，发送数据并收到返回结果来模拟这一协议。</p> <p>不过我们今天采用一种更为简单的方式，直接在命令行下使用<code>telnet</code>进行连接就可以了，以我本机启动的redis为例，直接输入<code>telnet 127.0.0.1 6379</code>就可以连接到redis服务了。之后再将包含换行的指令一次性拷贝到命令行，然后回车，就能够收到来自Redis服务的回复了：</p> <p></p> <p>下面先来看看继承自RESP V2的5种返回格式，为了统一命名规范，介绍中均采用RESP3官方文档中的新的名称来替代RESP V2中的旧命名，例如不再使用旧的<strong>批量回复</strong>、<strong>多条批量回复</strong>等类型名称。</p> <h3>Simple string</h3> <p>表示简单字符串回复，它只有一行回复，回复的内容以<code>+</code>作为开头，不允许换行，并以<code>\r\n</code>结束。有很多指令在执行成功后只会回复一个<code>OK</code>，使用的就是这种格式，能够有效地将传输、解析的开销降到最低。</p> <p>还是以上面的<code>set</code>指令为例，发送请求：</p> <pre><code>*3 $3 set $4 name $5 hydra</code></pre> <p>收到回复：</p> <pre><code>+OK\r\n</code></pre> <h3>Simple error</h3> <p>错误回复，它可以看做简单字符串回复的变种形式，它们之间的格式也非常类似，区别只有第一个字符是以-作为开头，错误回复的内容通常是错误类型及对错误描述的字符串。错误回复出现在一些异常的场景，例如当发送了错误的指令、操作数的数量不对时，都会进行错误回复。</p> <p>发送一条错误的指令：</p> <pre><code>*1 $8 Dr.Hydra</code></pre> <p>收到回复，提示错误信息：</p> <pre><code>-ERR unknown command `Dr.Hydra`, with args beginning with:\r\n</code></pre> <h3>Number</h3> <p>整数回复，它的应用也非常广泛，它以<code>:</code>作为开头，以<code>\r\n</code>结束，用于返回一个整数。例如当执行<code>incr</code>后返回自增后的值，执行<code>llen</code>返回数组的长度，或者使用<code>exists</code>命令返回的0或1作为判断一个key是否存在的依据，这些都使用了整数回复。</p> <p>发送一条查看数组长度的指令：</p> <pre><code>*2 $4 llen $7 myarray</code></pre> <p>收到回复：</p> <pre><code>:4\r\n</code></pre> <h3>Blob string</h3> <p>多行字符串的回复，也被叫做批量回复，在RESP V2中将它称为<code>Bulk String</code>。以<code>$</code>作为开头，后面是发送的字节长度，然后是<code>\r\n</code>，然后发送实际的数据，最终以<code>\r\n</code>结束。如果要回复的数据不存在，那么回复长度为-1。</p> <p>发送一条<code>get</code>命令请求：</p> <pre><code>*2 $3 get $4 name</code></pre> <p>收到回复：</p> <pre><code>$5\r\n hydra\r\n</code></pre> <h3>Array</h3> <p>可以理解为RESP V2中的<strong>多条批量回复</strong>，当服务端要返回多个值时，例如返回一些元素的集合时，就会使用<code>Array</code>。它以<code>*</code>作为开头，后面是返回元素的个数，之后再跟随多个上面的<code>Blob String</code>。</p> <pre><code>*4 $6 lrange $7 myarray $1 0 $2 -1</code></pre> <p>收到回复，包含了集合中的4个元素：</p> <pre><code>*4 $1 1 $1 2 $1 2 $2 32</code></pre> <p>这5种继承自RESP V2协议的返回数据类型的简单回顾到此结束，下面我们来开启RESP3协议新特性的探索之旅。</p> <h2>RESP3中新的类型</h2> <p>目前在Redis6.0.X版本中，仍然是默认使用的RESP V2协议，并且在兼容RESP V2的基础上，也同时也支持开启RESP3。估计在未来的某个版本，Redis可能会全面切换到RESP3，不过这么做的话对目前的Redis客户端连接工具会有不小的冲击，都需要根据协议内容进行底层通信的改造。</p> <p>在使用<code>telnet</code>连接到redis服务后，先输入下面的命令来切换到RESP3版本的协议，至于<code>hello</code>命令的具体返回数据以及数据表示的意义，这里暂且略过，后面会具体来看。</p> <pre><code>hello 3</code></pre> <p>下面我们就来详细看看在RESP3中，除了保留上面的5种旧回复类型外，新增的13种通信返回数据类型，部分数据类型会配合示例进行演示。<strong>为了看起来更加简洁，下面的演示例子发送命令均使用原始命令，不再转化为协议格式，并且省略数据返回结果中每行结束的</strong><code>\r\n</code><strong>！</strong></p> <h3>1、Null</h3> <p>新协议中使用下划线字符后跟<code>CR</code>和<code>LF</code>字符来表示空值，也就是用<code>_\r\n</code>来替代原先的单个空值的返回<code>$-1</code>。例如在使用<code>get</code>命令查找一个不存在的key时：</p> <pre><code>get hydra</code></pre> <p>RESP V2返回：</p> <pre><code>$-1</code></pre> <p>RESP3返回：</p> <pre><code>_</code></pre> <h3>2、Double</h3> <p>浮点数返回时以逗号开头，格式为<code>,&lt;floating-point-number&gt;\r\n</code>，使用<code>zset score key member</code>获取分数的命令来进行测试：</p> <pre><code>zscore fruit apple</code></pre> <p>RESP V2返回时使用的是<code>Bulk String</code>的格式：</p> <pre><code>$18 5.6600000000000001</code></pre> <p>RESP3返回格式：</p> <pre><code>,5.6600000000000001</code></pre> <h3>3、Boolean</h3> <p>布尔类型的数据返回值，其中true被表示为<code>#t\r\n</code>，而false被表示为<code>#f\r\n</code>。不过Hydra暂时没有找到返回布尔类型结果的例子，即使是用lua脚本直接返回布尔类型也无法实现。</p> <pre><code>eval "return true" 0  eval "return false" 0</code></pre> <p>上面的lua脚本在返回true时结果为<code>:1\r\n</code>，返回false时结果为<code>_\r\n</code>，这是因为lua中布尔类型的true会转换为redis中的整数回复1，而false类型会转换成<code>Nil Bulk</code>。至于有哪些指令能够返回布尔类型的数据，有了解的小伙伴可以给我留言补充。</p> <h3>4、Blob error</h3> <p>与字符串类型比较相似，它的格式为<code>!&lt;length&gt;\r\n&lt;bytes&gt;\r\n</code>，但是与简单错误类型一样，开头使用<code>!</code>表示返回的是一段错误信息描述。例如错误<code>SYNTAX invalid syntax</code>会按照下面的格式返回：</p> <pre><code>!21 SYNTAX invalid syntax</code></pre> <h3>5、Verbatim string</h3> <p><code>Verbatim string</code>也表示一个字符串格式，与<code>Blob String</code>非常相似，但是使用<code>=</code>开头替换了<code>$</code>，另外之后的三个字节提供了有关字符串格式的信息，例如<code>txt</code>表示纯文本，<code>mkd</code>表示markdown格式，第四个字节则固定为<code>:</code>。这种格式适用于在没有任何转义或过滤的情况下显示给用户。</p> <p>使用延时事件统计与分析指令进行测试，发送：</p> <pre><code>latency doctor</code></pre> <p>RESP2返回的数据还是<code>Blob String</code>格式：</p> <pre><code>$196 Dave, no latency spike was observed during the lifetime of this Redis instance, not in the slightest bit. I honestly think you ought to sit down calmly, take a stress pill, and think things over.</code></pre> <p>RESP V3返回的数据采用了新的格式：</p> <pre><code>=200 txt:Dave, no latency spike was observed during the lifetime of this Redis instance, not in the slightest bit. I honestly think you ought to sit down calmly, take a stress pill, and think things over.</code></pre> <h3>6、Big number</h3> <p><code>Big number</code>类型用于返回非常大的整数数字，可以表示在有符号64位数字范围内的整数，包括正数或负数，但是需要注意不能含有小数部分。数据格式为<code>(&lt;big number&gt;\r\n</code>，以左括号开头，示例如下：</p> <pre><code>(3492890328409238509324850943850943825024385</code></pre> <p>注意，当<code>Big number</code>不可用时，客户端会返回一个字符串格式的数据。</p> <h3>7、Aggregate data types</h3> <p>与前面我们介绍的给定数据类型的单个值不同，<code>Aggregate data types</code>可以理解为聚合数据类型。这也是RESP3的一个核心思想，要能够从协议和类型的角度，来描述不同语义的聚合数据类型。</p> <p>聚合数据类型的格式如下，通常由聚合类型、元素个数以及具体的单一元素构成：</p> <pre><code>&lt;aggregate-type-char&gt;&lt;numelements&gt;&lt;CR&gt;&lt;LF&gt; ... numelements other types ...</code></pre> <p>例如一个包含三个数字的数组<code>[1,2,3]</code>可以表示为：</p> <pre><code>*3 :1 :2 :3</code></pre> <p>当然聚合数据类型中的元素可以是其他聚合数据类型，例如在数组中也可以嵌套包含其他数组（下面的内容包含了缩进方便理解）：</p> <pre><code>*2     *3         :1         $5         hello         :2     #f</code></pre> <p>上面的聚合数据类型所表示的数据为<code>[[1,"hello",2],false]</code>。</p> <h3>8、Map</h3> <p><code>Map</code>数据类型与数组比较类似，但是以<code>%</code>作为起始，后面是<code>Map</code>中键值对的数量，而不再是单个数据项的数量。它的数据内容是一个<strong>有序</strong>的键值对的数组，之后分行显示键值对的<code>key</code>和<code>value</code>，因此后面的数据行一定是偶数行。先看一下官方文档给出的例子，以下面的Json字符串为例：</p> <pre><code>{     "first":1,     "second":2 }</code></pre> <p>转换为<code>Map</code>类型后格式为下面的形式：</p> <pre><code>%2 +first :1 +second :2</code></pre> <p>但是通过实验，Hydra发现了点有意思的东西，当我们发送一条<code>hgetall</code>的命令来请求哈希类型的数据时：</p> <pre><code>hgetall user</code></pre> <p>RESP V2返回的数据仍然使用老的<code>Array</code>格式，符合我们的预期：</p> <pre><code>*4 $4 name $5 Hydra $3 age $2 18</code></pre> <p>但是下面RESP3的数据返回却出乎我们的意料，可以看到虽然前面的<code>%2</code>表示使用了<code>Map</code>格式，但是后面并没有遵循官方文档给出的规范，除了开头的<code>%2</code>以外，其余部分与<code>Array</code>完全相同（）。</p> <pre><code>%2 $4 name $5 Hydra $3 age $2 18</code></pre> <p>关于实际传输数据与文档中给出示例的出入，Hydra有一点自己的猜测，放在最后总结部分。</p> <h3>9、Set</h3> <p><code>Set</code>与<code>Array</code>类型非常相似，但是它的第一个字节使用<code>~</code>替代了<code>*</code>，它是一个无序的数据集合。还是先看一下官方文档中给出的示例，下面是一个包含了5个元素的集合类型数据，并且其中具体的数据类型可以不同：</p> <pre><code>~5&lt;CR&gt;&lt;LF&gt; +orange&lt;CR&gt;&lt;LF&gt; +apple&lt;CR&gt;&lt;LF&gt; #t&lt;CR&gt;&lt;LF&gt; :100&lt;CR&gt;&lt;LF&gt; :999&lt;CR&gt;&lt;LF&gt;</code></pre> <p>下面使用<code>SMEMBERS</code>命令获取集合中的所有元素进行测试：</p> <pre><code>SMEMBERS  myset</code></pre> <p>RESP V2返回时仍然使用<code>Array</code>格式：</p> <pre><code>*3 $1 a $1 c $1 b</code></pre> <p>RESP3的数据返回情况和<code>Map</code>比较类似，使用<code>~</code>开头，但是没有完全遵从协议中的格式：</p> <pre><code>~3 $1 a $1 c $1 b</code></pre> <h3>10、Attribute</h3> <p><code>Attribute</code>类型与<code>Map</code>类型非常相似，但是头一个字节使用<code>|</code>来代替了<code>%</code>，<code>Attribute</code>描述的数据内容比较像<code>Map</code>中的字典映射。客户端不应该将这个字典内容看做数据回复的一部分，而是当做增强回复内容的辅助数据。</p> <p>在文档中提到，在未来某个版本的Redis中可能会出现这样一个功能，每次执行指令时都会打印访问的<code>key</code>的请求频率，这个值可能使用一个浮点数表示，那么在执行<code>MGET a b</code>时就可能会收到回复：</p> <pre><code>|1     +key-popularity     %2         $1         a         ,0.1923         $1         b         ,0.0012 *2     :2039123     :9543892</code></pre> <p>在上面的数据回复中，实际中回复的数据应该是<code>[2039123,9543892]</code>，但是在前面附加了它们请求的属性，当读到这个<code>Attribute</code>类型数据后，应当继续读取后面的实际数据。</p> <h3>11、Push</h3> <p><code>Push</code>数据类型是一种服务器向客户端发送的异步数据，它的格式与<code>Array</code>类型比较类似，但是以<code>&gt;</code>开头，接下来的数组中的第一个数据为字符串类型，表示服务器发送给客户端的推送数据是何种类型。数组中其他的数据也都包含自己的类型，需要按照协议中类型规范进行解析。</p> <p>简单看一下文档中给出的示例，在执行<code>get key</code>命令后，可能会得到两个有效回复：</p> <pre><code>&gt;4 +pubsub +message +somechannel +this is the message $9 Get-Reply</code></pre> <p>在上面的这段回复中需要注意，收到的两个回复中第一个是推送数据的类型，第二个才是真正回复的数据内容。</p> <p>注意！这里在文档中有一句提示：虽然下面的演示使用的是<code>Simple string</code>格式，但是在实际数据传输中使用的是<code>Blob string</code>格式。所以盲猜一波，上面的<code>Map</code>和<code>Set</code>也是同样的情况？</p> <p>这里先简单铺垫一下<code>Push</code>回复类型在redis6中非常重要的一个使用场景<strong>客户端缓存</strong><code>client-side caching</code>，它允许将数据存储在本地应用中，当访问时不再需要访问redis服务端，但是其他客户端修改数据时需要通知当前客户端作废掉本地应用的客户端缓存，这时候就会用到<code>Push</code>类型的消息。</p> <p>我们先在客户端A中执行下面的命令：</p> <pre><code>client tracking on get key1</code></pre> <p>在客户端B中执行：</p> <pre><code>set key1 newValue</code></pre> <p>这时就会在客户端A中收到<code>Push</code>类型的消息，通知客户端缓存失效。在下面收到的消息中就包含了两部分，第一部分表示收到的消息类型为<code>invalidate</code>，第二部分则是需要作废的缓存<code>key1</code>：</p> <pre><code>&gt;2 $10 invalidate *1 $4 key1</code></pre> <h3>12、Stream</h3> <p>在前面介绍的类型中，返回的数据字符串一般都具有指定的长度，例如下面这样：</p> <pre><code>$1234&lt;CR&gt;&lt;LF&gt; .... 1234 bytes of data here ...&lt;CR&gt;&lt;LF&gt;</code></pre> <p>但是有时候需要将一段不知道长度的字符串数据从客户端传给服务器（或者反向传输）时，很明显这种格式无法使用，因此需要一种新的格式用来传送<strong>不确定长度</strong>的数据。</p> <p>文档中提到，过去在服务端有一个私有扩展的数据格式，规范如下：</p> <pre><code>$EOF:&lt;40 bytes marker&gt;&lt;CR&gt;&lt;LF&gt; ... any number of bytes of data here not containing the marker ... &lt;40 bytes marker&gt;</code></pre> <p>它以<code>$EOF:</code>作为起始字节，然后是40字节的<code>marker</code>标识符，在<code>\r\n</code>后跟随的是真正的数据，结束后也是40字节的标识符。标识符以伪随机的方式生成，基本上不会与正常的数据发生冲突。</p> <p>但是这种格式存在一定的局限性，主要问题就在于生成标识符以及解析标识符上，由于一些原因使得上面这种格式在实际使用中非常脆弱。因此最终在规范中提出了一种<strong>分块编码格式</strong>，举一个简单的例子，当需要发送事先不知道长度的字符串<code>Hello world</code>时：</p> <pre><code>$? ;4 Hell ;5 o wor ;2 ld ;0</code></pre> <p>这种格式以<code>$?</code>开头，表示是一个不知道长度的分块编码格式，后面传输的数据数量没有限制，在最后以零长度的<code>;0</code>作为结束传输的标识。文档中提到，目前还没有命令会以这个格式来进行数据回复，但是会在后面的功能模块中实装这个协议。</p> <h3>13、HELLO</h3> <p>在介绍RESP3的最开始，我们就在<code>telnet</code>中通过<code>hello 3</code>的命令来切换协议到V3版本。这个特殊的命令完成了两件事：</p> <ul> <li>它允许服务器与RESP V2版本向后兼容，也方便以后更加轻松的切换到RESP3</li> <li><code>hello</code>命令可以返回有关服务器和协议的信息，以供客户端使用</li> </ul> <p><code>hello</code>命令的格式如下，可以看到除了协议版本号外，还可以指定用户名和密码：</p> <pre><code>HELLO &lt;protocol-version&gt; [AUTH &lt;username&gt; &lt;password&gt;]</code></pre> <p><code>hello</code>命令的返回结果是前面介绍过的<code>Map</code>类型，仅仅在客户端和服务器建立连接的时候发送。</p> <pre><code>%7 $6 server $5 redis $7 version $6 6.0.16 $5 proto :3 $2 id :18 $4 mode $10 standalone $4 role $6 master $7 modules *0</code></pre> <p>转换为我们可读的<code>Map</code>格式后，可以看到它返回的Redis服务端的一些信息：</p> <pre><code>{     "server":"redis",     "version":"6.0.16",     "proto":3,     "id":18,     "mode":"standalone",     "role":"master",     "modules":[] }</code></pre> <h2>总结</h2> <p>在RESP V2中，通信协议还是比较简单，通信内容大多也都还是通过数组形式进行编码和发送，这种情况带来了很多不便，有很多情况需要根据操作命令的类型来判断返回的数据具体是什么类型，这无疑增加了客户端解析数据的难度与复杂度。</p> <p>而在RESP3中，通过引入新的多种数据类型，通过起始字节的字符进行类型的区分编码，使客户端可以直接判断返回数据的类型，在相当大的程度上，减轻了解析的复杂度，提升了效率。</p> <p>本文中对于新的返回数据类型，一部分给出了通信数据的示例，但还是有一些类型暂时没有找到合适的命令进行测试，有了解的小伙伴们可以给我补充。</p> <p>另外对于<code>Map</code>和<code>Set</code>，实际传输的数据与官方文档给出的仍有一定出入，个人认为情况和<code>Push</code>相同，可能是官方文档中更多只偏向于演示，使用<code>Simple string</code>来代替了<code>Blob string</code>。</p> <p>最后再啰嗦一句，说说协议的命名，新一代的协议名称就叫<code>RESP3</code>，而没有继承第二代的命名规范叫<code>RESP V3</code>，也不是<code>RESP version3</code>什么乱七八糟的，所以就不要纠结文中为啥一会是<code>RESP V2</code>，一会是<code>RESP3</code>这种不对称的命名了。</p> <p>那么，这次的分享就到这里，我是Hydra，下篇文章再见。</p> <p><strong>参考文档：</strong></p> <blockquote> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/redis/redis-doc/blob/master/docs/reference/protocol-spec.md"  target="_blank">https://github.com/redis/redis-doc/blob/master/docs/reference/protocol-spec.md</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/antirez/RESP3/blob/master/spec.md"  target="_blank">https://github.com/antirez/RESP3/blob/master/spec.md</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://redis.io/docs/reference/protocol-spec/#high-performance-parser-for-the-redis-protocol"  target="_blank">https://redis.io/docs/reference/protocol-spec/#high-performance-parser-for-the-redis-protocol</a></p> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-37625.htm">动物疫苗厂家有多少家上市公司 动物疫苗厂家有多少家上市公司呢</a></p>
+                                        <p>下一个：<a href="/news/article-38097.htm">动物疫苗是什么颜色（动物疫苗是什么颜色的图片）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31291.htm" title="2022国考公务员报名人数统计（2022年国考公务员岗位报名人数）">2022国考公务员报名人数统计（2022年国考公务员岗位报名人数）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-10-free-clash-subscribe.htm" title="「12月10日」最高速度22.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「12月10日」最高速度22.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-29-node-share-links.htm" title="「12月29日」最高速度20.6M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「12月29日」最高速度20.6M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-17-free-ssr-node.htm" title="「10月17日」最高速度22.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「10月17日」最高速度22.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-27624.htm" title="动物疫苗税收政策文件（动物疫苗税收政策文件是什么）">动物疫苗税收政策文件（动物疫苗税收政策文件是什么）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-clash-v2ray-ss-ssr.htm" title="「12月22日」最高速度20M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「12月22日」最高速度20M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-8-clash-windows.htm" title="「10月8日」最高速度20.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「10月8日」最高速度20.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-21-free-ssr-node.htm" title="「12月21日」最高速度19.7M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「12月21日」最高速度19.7M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-27163.htm" title="猫粮狗粮零售如何挣钱（狗粮猫粮的销售和利润怎么样）">猫粮狗粮零售如何挣钱（狗粮猫粮的销售和利润怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-23444.htm" title="爱情公寓:张伟的神级选择（爱情公寓张伟）硬核推荐，">爱情公寓:张伟的神级选择（爱情公寓张伟）硬核推荐，</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
