@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-47516.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Go1.18 新特性之多模块Multi-Module工作区模式_Golang</title>
+        <meta name="description" content="初始化一个新的工作区 目录  			  目录  背景  举例：未发布的 module  Go1.18 新特性：多模块（Multi-Module）工作区模式  Go1.18 工作区模式  初始化一个新的" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-47516.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="Go1.18 新特性之多模块Multi-Module工作区模式_Golang" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/f3aa9f1b6dcf9083beb54c496aa84ff7.webp" />
+        <meta property="og:release_date" content="2025-01-28T09:33:27" />
+    <meta property="og:updated_time" content="2025-01-28T09:33:27" />
+        <meta property="og:description" content="初始化一个新的工作区 目录  			  目录  背景  举例：未发布的 module  Go1.18 新特性：多模块（Multi-Module）工作区模式  Go1.18 工作区模式  初始化一个新的" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Go1.18 新特性之多模块Multi-Module工作区模式_Golang">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">Go1.18 新特性之多模块Multi-Module工作区模式_Golang</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				  			 <div id="log-box">  				<div id="catalog"><ul id="catalog-ul"> <li><i class="be be-arrowright"></i> <a href="#title-0" title="初始化一个新的工作区">初始化一个新的工作区</a></li> </ul><span class="log-zd"><span class="log-close"><a title="隐藏目录"><i class="be be-cross"></i><strong>目录</strong></a></span></span></div>  			</div> <div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">背景</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow">举例：未发布的 module</a></li> </ul> <li><a href="#_label1" rel="nofollow">Go1.18 新特性：多模块（Multi-Module）工作区模式</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_1" rel="nofollow">Go1.18 工作区模式</a></li> <ul class="third_class_ul"> <li><a href="#_label3_1_1_0" rel="nofollow">初始化一个新的工作区</a></li> </ul> <li><a href="#_lab2_1_2" rel="nofollow">go.work 文件结构</a></li> <ul class="third_class_ul"></ul> <li><a href="#_lab2_1_3" rel="nofollow">go.work 文件优先级高于 go.mod 中定义在</a></li> <ul class="third_class_ul"></ul> <li><a href="#_lab2_1_4" rel="nofollow">如何禁用工作区</a></li> <ul class="third_class_ul"></ul> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>背景</h2> <p>在 go 中使用多个模块可能真的是一件苦差事。特别是当您的一个模块依赖于另一个模块时，您需要同时编辑这两个模块！</p> <p>您编辑父模块，但是然后您需要将其推送到repo。然后在依赖模块中运行 update 以下载新版本。最终使用2行修复您需要的。至少可以说是一种痛苦。</p> <p>在 Go 1.18之前，建议使用依赖模块中的 replace 指令来处理这个问题。</p> <p>这个方法是有效的，但也有自己的问题，比如需要手动编辑 go.mod，确保你提交代码时候，不commit 这个 replace等等。</p> <p>最后，从 Go 1.18开始，引入了一种同时处理多个模块的新方法，这种方法消除了这些问题: go.work。</p> <p>Multi-Module, Single Workspace<br />https://medium.com/@michael_epps/multi-module-single-workspace-3493528555ad</p> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3>举例：未发布的 module</h3> <p>在做本地的 Go 项目开发时，可能会在本地同时开发多个库（项目库、工具库、第三方库）等。</p> <p>如下代码：</p> <div class="ay1code"> <pre class="brush:plain;">package main     import (      "github.com/eddycjy/pkgutil"  )     func main() {      pkgutil.PrintFish()  }  </pre> </div> <p>我们看到：该代码对外唯一的依赖是module path为"github.com/eddycjy/pkgutil"的module，但后者是一个尚在本地进行开发，还未发布到http://github.com上的module。</p> <p>如果这个时候运行 go run 或是 go mod tidy，都不行，会运行失败。<br />报如下类似错误：</p> <blockquote> <p>fatal: repository 'https://github.com/eddycjy/pkgutil/' not found</p> </blockquote> <p>这个问题报错是因为 github.com/eddycjy/pkgutil 这个库，在 GitHub 是没有的，自然也就拉取不到。</p> <p>因此，许多同学会发出灵魂质疑：Go 的依赖都必须要上传到 GitHub 吗，强绑定？</p> <p>解决方法：在 Go1.18 以前，我们会通过 replace，又或是直接上传到 Github 上，自然也就能被 Go 工具链拉取到依赖了。</p> <p>用replace指示符将该版本指向本地的module的开发目录。</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>Go1.18 新特性：多模块（Multi-Module）工作区模式</h2> <p>2022 年 3 月 15 日 go 1.18 正式发布，新版本除了对性能的提升之外，还引入了很多新功能，其中就有 go 期盼已久的功能泛型(Generics)，同时还引入的多模块工作区(Workspaces)和模糊测试(Fuzzing)。</p> <blockquote> <p>弥补了当前go module构建模式的一些不足，堪称是go module构建模式的最后一块拼图。</p> </blockquote> <p>Go 多模块工作区能够使开发者能够更容易地同时处理多个模块的工作，如:</p> <ul> <li>方便进行依赖的代码调试(打断点、修改代码)、排查依赖代码 bug</li> <li>方便同时进行多个仓库/模块并行开发调试</li> </ul> <p>go 使用的是多模块工作区，可以让开发者更容易同时处理多个模块的开发。在 Go 1.17 之前，只能使用 go.mod replace 指令来实现，如果你正巧是同时进行多个模块的开发，使用它可能是很痛苦的。每次当你想要提交代码的时候，都不得不删除掉 go.mod 中的 replace 才能使模块稳定的发布版本。</p> <p class="maodian"><a name="_lab2_1_1" rel="nofollow"></a></p> <h3>Go1.18 工作区模式</h3> <p>在社区的多轮反馈下，Michael Matloob 提出了提案《Proposal: Multi-Module Workspaces in cmd/go[1]》进行了大量的讨论和实施，在 Go1.18 正式落地。</p> <p>新提案的一个核心概念，就是增加了 go work 工作区的概念，针对的是 Go Module 的依赖管理模式。</p> <p>这个提案引入一个go.work文件用于开启Go工作区模式。<strong>go.work通过directory指示符设置一些本地路径，这些路径下的go module构成一个工作区(workspace)</strong>，Go命令可以操作这些路径下的go module，也会<strong>优先使用工作区中的go module</strong>。</p> <p>其能够在本地项目的 go.work 文件中，通过设置一系列依赖的模块本地路径，再将路径下的模块组成一个当前 Go 工程的工作区，也就是 <strong>N 个 Go Module 组成 1 个 Go Work， 工作区的读取优先级是最高的。</strong></p> <blockquote> <p>总结： 当你的本地有很多module，且这些module存在相互依赖，那么我们可以在这些module的外面建立一个Go工作区，基于这个Go工作区开发与调试这些module就变得十分方便。</p> </blockquote> <p class="maodian"><a name="_label3_1_1_0" rel="nofollow"></a></p> <span class="directory"></span><h4 id="title-0">初始化一个新的工作区</h4> <p>只要执行 go work init 就可以初始化一个新的工作区，后面跟的参数就是要生成的具体子模块 mod。</p> <p>命令如下：</p> <div class="ay1code"> <pre class="brush:bash;">go work init ./mod ./tools</pre> </div> <p>项目目录如下：</p> <div class="ay1code"> <pre class="brush:plain;">awesomeProject  ├── mod  │   ├── go.mod      // 子模块  │   └── main.go  ├── go.work         // 工作区  └── tools      ├── fish.go      └── go.mod      // 子模块</pre> </div> <h5>go work 支持命令</h5> <ul> <li>通常情况下，建议不要提交 go.work 文件到 git 上，因为它主要用于本地代码开发。</li> <li>推荐在: $GOPATH 路径下执行，生成 go.work 文件</li> <li>go work init 初始化工作区文件，用于生成 go.work 工作区文件</li> </ul> <p>初始化并写入一个新的 go.work 到当前路径下，可以指定需要添加的代码模块<br />示例: go work init ./hello 将本地仓库 hello 添加到工作区<br />hello 仓库必须是 go mod 依赖管理的仓库(./hello/go.mod 文件必须存在)</p> <h5>go work use 添加新的模块到工作区</h5> <p>use 指定使用的模块目录</p> <p>命令示例:</p> <div class="ay1code"> <pre class="brush:bash;">go work use ./example 添加一个模块到工作区</pre> </div> <p>命令示例:</p> <div class="ay1code"> <pre class="brush:bash;">go work use ./example 添加一个模块到工作区  go work use ./example ./example1 添加多个模块到工作区  go work use -r ./example 递归 ./example 目录到当前工作区  删除命令使用 go work edit -dropuse=./example 功能</pre> </div> <p>可以使用 go work use hello 添加模块，也可以手动修改 go.work 工作区添加新的模块<br /><strong>在工作区中添加了模块路径，编译的时候会自动使用 use 中的本地代码进行代码编译，和 replaces 功能类似。</strong></p> <div class="ay1code"> <pre class="brush:bash;"># 单模块结构  use ./hello  # 多模块结构  use (      ./hello      ./example  )  </pre> </div> <h5>go work edit 用于编辑 go.work 文件</h5> <p><code>go work edit</code> 用于编辑 go.work 文件<br />可以使用 edit 命令编辑和手动编辑 go.work 文件效果是相同的<br />示例:</p> <div class="ay1code"> <pre class="brush:bash;">go work edit -fmt go.work 重新格式化 go.work 文件  go work edit -replace=github.com/link1st/example=./example go.work 替换代码模块  go work edit -dropreplace=github.com/link1st/example 删除替换代码模块  go work edit -use=./example go.work 添加新的模块到工作区  go work edit -dropuse=./example go.work 从工作区中删除模块</pre> </div> <h5>go work sync 将工作区的构建列表同步到工作区的模块</h5> <p>go env GOWORK</p> <p>查看环境变量，查看当前工作区文件路径<br />可以排查工作区文件是否设置正确，go.work 路径找不到可以使用 GOWORK 指定</p> <p class="maodian"><a name="_lab2_1_2" rel="nofollow"></a></p> <h3>go.work 文件结构</h3> <p>文件结构和 go.mod 文件结构类似，支持 Go 版本号、指定工作区和需要替换的仓库<br />文件结构示例:</p> <div class="ay1code"> <pre class="brush:plain;">go 1.18    use (      ./hello      ./example  )    replace (      github.com/link1st/example =&gt; ./example1  )</pre> </div> <p>replaces 替换依赖仓库地址<br /><strong>replaces 命令与 go.mod 指令相同，用于替换项目中依赖的仓库地址</strong><br />需要注意的是 replaces 和 use 不能同时指定相同的本地路径</p> <p>错误示例<br />同时在 use 和 replace 指定相同的本地路径</p> <div class="ay1code"> <pre class="brush:plain;">go 1.18    use (      ./hello      ./example  )    replace (      github.com/link1st/example =&gt; ./example  )</pre> </div> <p class="maodian"><a name="_lab2_1_3" rel="nofollow"></a></p> <h3>go.work 文件优先级高于 go.mod 中定义在</h3> <p>同时使用 go.work 和 go.mod replace 功能的的时候分别指定不同的代码仓库路径，go.work 优先级高于 go.mod 中定义</p> <p class="maodian"><a name="_lab2_1_4" rel="nofollow"></a></p> <h3>如何禁用工作区</h3> <p>Go 全局变量 GOWORK 设置 off 则可以禁用工作区功能</p> <div class="ay1code"> <pre class="brush:bash;">export GOWORK=off</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-47515.htm">Spring事件监听机制源码解析</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-clash-node-daily-updates.htm" title="「11月7日」最高速度19.2M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「11月7日」最高速度19.2M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-47026.htm" title="宠物医院好评模板100字怎么写的呀（宠物医院好评语30字通用）">宠物医院好评模板100字怎么写的呀（宠物医院好评语30字通用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-clash-subscribe.htm" title="「11月17日」最高速度23M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「11月17日」最高速度23M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-clash.htm" title="「10月21日」最高速度20.2M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「10月21日」最高速度20.2M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26237.htm" title="猫不打疫苗不可以洗澡吗为什么（猫不打疫苗可以吗?）">猫不打疫苗不可以洗澡吗为什么（猫不打疫苗可以吗?）</a></li>
+                        <li class="py-2"><a href="/news/article-19778.htm" title="狗狗体外驱虫后虫子去哪了（狗体外驱虫后虫到哪了）">狗狗体外驱虫后虫子去哪了（狗体外驱虫后虫到哪了）</a></li>
+                        <li class="py-2"><a href="/news/article-27624.htm" title="动物疫苗税收政策文件（动物疫苗税收政策文件是什么）">动物疫苗税收政策文件（动物疫苗税收政策文件是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-26234.htm" title="动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）">动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）</a></li>
+                        <li class="py-2"><a href="/news/article-36640.htm" title="php代码审计之——phpstorm动态调试">php代码审计之——phpstorm动态调试</a></li>
+                        <li class="py-2"><a href="/news/article-39115.htm" title="国考公务员报名2021（国考公务员报名入口）">国考公务员报名2021（国考公务员报名入口）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

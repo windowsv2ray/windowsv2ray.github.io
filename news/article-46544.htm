@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-46544.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue+SpringBoot实现Excel在线预览功能</title>
+        <meta name="description" content="** 问题还原： ** 在做项目时，用户需要上传Excel模板，里面有对应的各种数据。我们拿到这个Excel后，定时的根据其中的数据去查对应的实时数据并进行计算，然后将实时数据和计算后的数据保存到Ex" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-46544.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="Vue+SpringBoot实现Excel在线预览功能" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/782d3e0d29fbdb2e7887d875be2f95d0.webp" />
+        <meta property="og:release_date" content="2025-01-26T09:59:43" />
+    <meta property="og:updated_time" content="2025-01-26T09:59:43" />
+        <meta property="og:description" content="** 问题还原： ** 在做项目时，用户需要上传Excel模板，里面有对应的各种数据。我们拿到这个Excel后，定时的根据其中的数据去查对应的实时数据并进行计算，然后将实时数据和计算后的数据保存到Ex" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue+SpringBoot实现Excel在线预览功能">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                                <a href="/" class="navbar-brand">Windows V2ray</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">Vue+SpringBoot实现Excel在线预览功能</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>**</p> <h2><a id="_2" rel="nofollow"></a>问题还原：</h2> <p>**<br /> 在做项目时，用户需要上传Excel模板，里面有对应的各种数据。我们拿到这个Excel后，定时的根据其中的数据去查对应的实时数据并进行计算，然后将实时数据和计算后的数据保存到Excel中存储到服务器上。用户在系统中可以看到Excel生成记录，点击后可以在线预览Excel。那么如何实现Excel在线预览那？<br /> **</p> <h2><a id="_8" rel="nofollow"></a>解决方案：</h2> <p><em><strong>方案1：</strong></em><br /> 使用Office官方自带的url，大概就是把要预览的Excel地址拼装到Office的链接后边，就可以通过生成的新链接直接访问了。<br /> PS：由于此方案会暴露数据，涉及隐私问题，所以此方法笔者没有尝试过，如有需要请自行百度。<br /><em><strong>方案2：</strong></em><br /> 通过js- xlsx插件实现，具体代码如下：<br /><strong>Vue相关代码如下：</strong><br /> 定义展示组件：</p> <pre><code class="prism language-html"><span class="token comment">&lt;!-- Excel在线预览 --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>excel-view-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>excelView<span class="token punctuation">"</span></span><span class="token attr-name">v-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>excelView<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre> <p>安装js-xlsx插件：</p> <pre><code class="prism language-javascript">npm install<span class="token operator">--</span>save xlsx</code></pre> <p>JS代码如下：</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span><span class="token constant">XLSX</span><span class="token keyword">from</span><span class="token string">'xlsx'</span><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     Vue<span class="token punctuation">.</span><span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>       method<span class="token operator">:</span><span class="token string">'get'</span><span class="token punctuation">,</span>       url<span class="token operator">:</span><span class="token string">'/后台url地址……'</span><span class="token punctuation">,</span>       responseType<span class="token operator">:</span><span class="token string">'arraybuffer'</span><span class="token comment">// 注：此处需要设置哦，不然返回数据格式不对。</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> workbook<span class="token operator">=</span><span class="token constant">XLSX</span><span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token class-name">Uint8Array</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span> type<span class="token operator">:</span><span class="token string">'array'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">// 解析数据</span><span class="token keyword">const</span> worksheet<span class="token operator">=</span> workbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">[</span>workbook<span class="token punctuation">.</span>SheetNames<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token comment">// workbook.SheetNames 下存的是该文件每个工作表名字,这里取出第一个工作表</span><span class="token keyword">this</span><span class="token punctuation">.</span>excelView<span class="token operator">=</span><span class="token constant">XLSX</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sheet_to_html</span><span class="token punctuation">(</span>worksheet<span class="token punctuation">)</span><span class="token comment">// 渲染</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// DOM加载完毕后执行，解决HTMLConnection有内容但是length为0问题。</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setStyle4ExcelHtml</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span>$message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span> methods<span class="token operator">:</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 设置Excel转成HTML后的样式</span><span class="token function">setStyle4ExcelHtml</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> excelViewDOM<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'excelView'</span><span class="token punctuation">)</span><span class="token keyword">if</span><span class="token punctuation">(</span>excelViewDOM<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> excelViewTDNodes<span class="token operator">=</span> excelViewDOM<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'td'</span><span class="token punctuation">)</span><span class="token comment">// 获取的是HTMLConnection</span><span class="token keyword">if</span><span class="token punctuation">(</span>excelViewTDNodes<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> excelViewTDArr<span class="token operator">=</span><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>excelViewTDNodes<span class="token punctuation">)</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> i<span class="token keyword">in</span> excelViewTDArr<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> id<span class="token operator">=</span> excelViewTDArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token comment">// 默认生成的id格式为sjs-A1、sjs-A2......</span><span class="token keyword">if</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> idNum<span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[^0-9]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">ig</span></span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token comment">// 提取id中的数字，即行号</span><span class="token keyword">if</span><span class="token punctuation">(</span>idNum<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>idNum<span class="token operator">===</span><span class="token string">'1'</span><span class="token operator">||</span> idNum<span class="token operator">===</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 第一行标题行</span>                 excelViewTDArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'class4Title'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span>idNum<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>idNum<span class="token operator">===</span><span class="token string">'2'</span><span class="token operator">||</span> idNum<span class="token operator">===</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 第二行表头行</span>                 excelViewTDArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'class4TableTh'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>Css样式代码如下：</p> <pre><code class="prism language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css"><span class="token selector">/deep/ table</span><span class="token punctuation">{<!-- --></span><span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">border-spacing</span><span class="token punctuation">:</span> 0<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">border</span><span class="token punctuation">:</span> 0px<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">/deep/ table tr td</span><span class="token punctuation">{<!-- --></span><span class="token comment">/* border: 1px solid gray !important; */</span><span class="token property">border-right</span><span class="token punctuation">:</span> 1px solid gray<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid gray<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/**整体样式 */</span><span class="token selector">/deep/ .excel-view-container</span><span class="token punctuation">{<!-- --></span><span class="token property">background-color</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/**标题样式 */</span><span class="token selector">/deep/ .class4Title</span><span class="token punctuation">{<!-- --></span><span class="token property">font-size</span><span class="token punctuation">:</span> 22px<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/**表格表头样式 */</span><span class="token selector">/deep/ .class4TableTh</span><span class="token punctuation">{<!-- --></span><span class="token comment">/* font-size: 14px !important; */</span><span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span> 2px<span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">background-color</span><span class="token punctuation">:</span> #EFE4B0<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span></code></pre> <p><strong>SpringBoot端相关代码如下：</strong><br /> Controller层代码：</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/getExcelData"</span><span class="token punctuation">)</span><span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">"获取Excel数据"</span><span class="token punctuation">)</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">getExcelData</span><span class="token punctuation">(</span><span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span><span class="token keyword">throws</span><span class="token class-name">IOException</span><span class="token punctuation">{<!-- --></span><span class="token class-name">ExcelUtil</span><span class="token punctuation">.</span>readExcelToIO<span class="token punctuation">(</span><span class="token string">"D:\\\\ExcelTest\\\\**.xlsx"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token class-name">ExcelUtil</span>代码如下：<span class="token keyword">public</span><span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">readExcelToIO</span><span class="token punctuation">(</span><span class="token class-name">String</span> fileName<span class="token punctuation">,</span><span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span><span class="token keyword">throws</span><span class="token class-name">IOException</span><span class="token punctuation">{<!-- --></span><span class="token comment">//判断是否为excel类型文件</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>fileName<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">".xls"</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span>fileName<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">".xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">throw</span><span class="token keyword">new</span><span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"所传入文件不是Excel文件！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">//读取Excel文件</span><span class="token class-name">File</span> excelFile<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">File</span><span class="token punctuation">(</span>fileName<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">InputStream</span> inputStream<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>excelFile<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 构造 XSSFWorkbook 对象，strPath 传入文件路径</span><span class="token class-name">Workbook</span> workbook<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//获取Excel工作薄</span><span class="token keyword">if</span><span class="token punctuation">(</span>excelFile<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">"xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           workbook<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">XSSFWorkbook</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span>           workbook<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">HSSFWorkbook</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span>workbook<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">throw</span><span class="token keyword">new</span><span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Excel文件有问题,请检查！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// 读取第一个sheet页表格内容</span><span class="token class-name">Sheet</span> sheet<span class="token operator">=</span> workbook<span class="token punctuation">.</span><span class="token function">getSheetAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">OutputStream</span> os<span class="token operator">=</span> response<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">ByteArrayOutputStream</span> baos<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">ByteArrayOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> workbook<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>baos<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 返回数据到输出流对象中</span> os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>baos<span class="token punctuation">.</span><span class="token function">toByteArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       os<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       os<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-46542.htm">在Java中搜索字符串中的字符。</a></p>
+                                        <p>下一个：<a href="/news/article-47026.htm">宠物医院好评模板100字怎么写的呀（宠物医院好评语30字通用）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-clash-windows.htm" title="「12月14日」最高速度20.8M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「12月14日」最高速度20.8M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-19776.htm" title="动物疫苗可以去畜牧局批发吗现在多少钱（动物疫苗经营许可证在哪里办）">动物疫苗可以去畜牧局批发吗现在多少钱（动物疫苗经营许可证在哪里办）</a></li>
+                        <li class="py-2"><a href="/news/article-45055.htm" title="动物医院叫什么医院名称好听 动物医院叫什么医院名称好听点">动物医院叫什么医院名称好听 动物医院叫什么医院名称好听点</a></li>
+                        <li class="py-2"><a href="/news/article-33318.htm" title="吉泰宠物医院电话多少（吉康宠物医院）">吉泰宠物医院电话多少（吉康宠物医院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-clash-subscribe.htm" title="「12月18日」最高速度18.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「12月18日」最高速度18.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-19778.htm" title="狗狗体外驱虫后虫子去哪了（狗体外驱虫后虫到哪了）">狗狗体外驱虫后虫子去哪了（狗体外驱虫后虫到哪了）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-23-free-high-speed-nodes.htm" title="「1月23日」最高速度20.4M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「1月23日」最高速度20.4M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-shadowrocket-node.htm" title="「12月5日」最高速度21M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「12月5日」最高速度21M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-6-free-high-speed-nodes.htm" title="「11月6日」最高速度20.2M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「11月6日」最高速度20.2M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-35470.htm" title="动物疫苗价格一览表图片高清大图下载（动物疫苗价格一览表图片高清大图下载）">动物疫苗价格一览表图片高清大图下载（动物疫苗价格一览表图片高清大图下载）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
