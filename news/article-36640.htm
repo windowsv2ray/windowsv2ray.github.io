@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://windowsv2ray.github.io/news/article-36640.htm" />
@@ -9,6 +9,33 @@
     <title>php代码审计之——phpstorm动态调试</title>
         <meta name="description" content="xdebug调试 调试环境部署 xdebug的版本需要与PHP版本相对于，所以不要轻易改变PHP环境版本。 0 配置php解析器  1 下载对应版本的xdebug xdebug官网下载地址：https" />
         <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-36640.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="php代码审计之——phpstorm动态调试" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/7c9b9478eede1a06f8e9fbcc9f165e66.webp" />
+        <meta property="og:release_date" content="2025-01-06T09:50:32" />
+    <meta property="og:updated_time" content="2025-01-06T09:50:32" />
+        <meta property="og:description" content="xdebug调试 调试环境部署 xdebug的版本需要与PHP版本相对于，所以不要轻易改变PHP环境版本。 0 配置php解析器  1 下载对应版本的xdebug xdebug官网下载地址：https" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="php代码审计之——phpstorm动态调试">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
     <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
     <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
     <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
@@ -97,16 +124,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-11-15-clash-v2ray-ss-ssr.htm" title="「11月15日」最高速度21.9M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「11月15日」最高速度21.9M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-ssr-node.htm" title="「11月14日」最高速度19.8M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「11月14日」最高速度19.8M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-24837.htm" title="南京哪里领养宠物比较好一点（南京领养宠物都要做什么条件）">南京哪里领养宠物比较好一点（南京领养宠物都要做什么条件）</a></li>
-                        <li class="py-2"><a href="/news/article-27163.htm" title="猫粮狗粮零售如何挣钱（狗粮猫粮的销售和利润怎么样）">猫粮狗粮零售如何挣钱（狗粮猫粮的销售和利润怎么样）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-26-free-subscribe-node.htm" title="「12月26日」最高速度19.8M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「12月26日」最高速度19.8M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-28557.htm" title="兰州宠物交易平台电话（兰州宠物交易市场）">兰州宠物交易平台电话（兰州宠物交易市场）</a></li>
-                        <li class="py-2"><a href="/news/article-36643.htm" title="深圳宠物领养中心 免费政策 深圳宠物领养中心 免费政策最新">深圳宠物领养中心 免费政策 深圳宠物领养中心 免费政策最新</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-8-clash-windows.htm" title="「10月8日」最高速度20.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「10月8日」最高速度20.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-30909.htm" title="宠物领养制度怎么写（宠物领养中心领养条件是什么）">宠物领养制度怎么写（宠物领养中心领养条件是什么）</a></li>
-                        <li class="py-2"><a href="/news/article-26234.htm" title="动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）">动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）</a></li>
+                        <li class="py-2"><a href="/news/article-33769.htm" title="什么是Java 9中的Project Jigsaw">什么是Java 9中的Project Jigsaw</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-free-clash-subscribe.htm" title="「11月10日」最高速度22.2M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接">「11月10日」最高速度22.2M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-46544.htm" title="Vue+SpringBoot实现Excel在线预览功能">Vue+SpringBoot实现Excel在线预览功能</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-clash-node-daily-updates.htm" title="「1月18日」最高速度18.5M/S，2025年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「1月18日」最高速度18.5M/S，2025年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-6-free-high-speed-nodes.htm" title="「11月6日」最高速度20.2M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「11月6日」最高速度20.2M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-12-free-v2ray.htm" title="「11月12日」最高速度19.1M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「11月12日」最高速度19.1M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-39115.htm" title="国考公务员报名2021（国考公务员报名入口）">国考公务员报名2021（国考公务员报名入口）</a></li>
+                        <li class="py-2"><a href="/news/article-23901.htm" title="Docker从入门到放弃(1) Docker简介与安装_在线工具">Docker从入门到放弃(1) Docker简介与安装_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-47998.htm" title="开一个宠物食品加工厂需要什么（开宠物食品厂需要什么手续）">开一个宠物食品加工厂需要什么（开宠物食品厂需要什么手续）</a></li>
+                        <li class="py-2"><a href="/news/article-25769.htm" title="被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）">被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）</a></li>
                     </ul>
     </div>
 </div>
@@ -118,16 +145,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-50546.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>docker故障大全</title>
+        <meta name="description" content="docker故障大全  故障记录   1、docker pull和docker run无镜像和容器 2、docker-proxy僵尸 3、k8s拉起容器名字冲突，无法成功拉起容器 4、docker p" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-50546.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="docker故障大全" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/60b6d84a3f77635ab81031e536c7d1f3.webp" />
+        <meta property="og:release_date" content="2025-02-03T09:27:27" />
+    <meta property="og:updated_time" content="2025-02-03T09:27:27" />
+        <meta property="og:description" content="docker故障大全  故障记录   1、docker pull和docker run无镜像和容器 2、docker-proxy僵尸 3、k8s拉起容器名字冲突，无法成功拉起容器 4、docker p" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="docker故障大全">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">docker故障大全</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>docker故障大全</h3> <ul> <li><a href="#_4" rel="nofollow">故障记录</a></li> <li> <ul> <li><a href="#1docker_pulldocker_run_6" rel="nofollow">1、docker pull和docker run无镜像和容器</a></li> <li><a href="#2dockerproxy_18" rel="nofollow">2、docker-proxy僵尸</a></li> <li><a href="#3k8s_45" rel="nofollow">3、k8s拉起容器名字冲突，无法成功拉起容器</a></li> <li><a href="#4docker_push_59" rel="nofollow">4、docker push镜像失败</a></li> <li><a href="#5bridgecurl_81" rel="nofollow">5、bridge模式启动容器，跨节点curl端口不通</a></li> <li><a href="#6bridge_103" rel="nofollow">6、bridge网络时断时通</a></li> <li><a href="#711_117" rel="nofollow">7、容器内1号进程退出，1号进程为业务进程</a></li> <li><a href="#8_137" rel="nofollow">8、业务侧查询镜像发现没有镜像</a></li> <li><a href="#9docker_runstartcreated_153" rel="nofollow">9、执行docker run以后，容器没有被start，状态为created</a></li> <li><a href="#10docker_169" rel="nofollow">10、docker状态异常，且无法启动</a></li> </ul> </li> </ul> </div> <p><em>持续记录中…</em><br /><em><strong>更新时间：2022-06-07</strong></em></p> </h1> <h2><a id="1docker_pulldocker_run_6" rel="nofollow"></a>1、docker pull和docker run无镜像和容器</h2> <blockquote> <p>docker pull 以及docker run，看不到下载下来的镜像和启动的容器，但是去到/var/lib/docker目录下，又有对应的镜像和容器层。</p> </blockquote> <p><strong>故障原因</strong></p> <blockquote> <p>/var/lib/docker挂载的时间比dockerd启动时间更晚，dockerd使用docker pull和docker run命令使用的是未挂载/var/lib/docker的docker目录，而非现在挂载以后的/var/lib/docker</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>dockerd启动要在挂载/var/lib/docker之后</p> </blockquote> <h2><a id="2dockerproxy_18" rel="nofollow"></a>2、docker-proxy僵尸</h2> <blockquote> <p>在其他容器中使用curl命令连接仓库镜像，无法curl通，但是在主机上使用curl命令连接仓库镜像可以curl通。原因是docker-proxy僵尸了。</p> </blockquote> <p><strong>故障原因</strong></p> <blockquote> <p>docker-proxy僵尸是由于kill -9 docker-proxy，直接杀死docker-proxy，但是dockerd在启动docker-proxy阶段没有使用wait方法等待子进程退出，dockerd无法回收docker-proxy。dockerd在stop阶段做了wait方法等待，可以在stop容器以后回收僵尸的docker-proxy。</p> </blockquote> <p>对应的函数为</p> <pre><code class="prism language-go"><span class="token keyword">func</span><span class="token punctuation">(</span>p<span class="token operator">*</span>proxyCommand<span class="token punctuation">)</span><span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token builtin">error</span><span class="token punctuation">{<!-- --></span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token keyword">func</span><span class="token punctuation">(</span>p<span class="token operator">*</span>proxyCommand<span class="token punctuation">)</span><span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token builtin">error</span><span class="token punctuation">{<!-- --></span><span class="token operator">...</span><span class="token keyword">go</span><span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 			waitChan<span class="token operator">&lt;-</span> p<span class="token punctuation">.</span>cmd<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">}</span></code></pre> <p><strong>解决方法</strong></p> <blockquote> <p>使用docker restart容器（会调用docker stop容器，dockerd会回收该容器僵尸掉的docker-proxy），重新拉起容器即可。</p> </blockquote> <h2><a id="3k8s_45" rel="nofollow"></a>3、k8s拉起容器名字冲突，无法成功拉起容器</h2> <blockquote> <p>拉起容器名字冲突，环境上存在大量Created状态容器，且未被清理。</p> </blockquote> <p><strong>故障原因</strong></p> <blockquote> <p>环境上存在14000多个Created状态的容器，k8s没有及时清理，docker日志中报错“清理失败，不存在该容器”。手动删除容器可以成功。</p> <p>原因是环境的SSD固态硬盘没有挂载成功，docker运行在机械硬盘上，io速度太慢，导致k8s侧拉起容器超时，反复不停拉起容器。</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>及时清理Created状态容器。如需要高并发，则挂载SSD固态硬盘提高系统io性能。</p> </blockquote> <h2><a id="4docker_push_59" rel="nofollow"></a>4、docker push镜像失败</h2> <blockquote> <p>push镜像失败，显示HTTP:500报错</p> </blockquote> <p><strong>故障原因</strong></p> <blockquote> <p>1、push镜像失败是由于镜像仓库配置的网络异常。报错received unexpected HTTP status: 500 Internal Server Error</p> <p>2、docker日志中同样报错structure needs cleaning。表示文件系统故障。</p> <p>自从报错structure needs cleaning文件系统故障以后，push镜像就一直不成功。</p> <p>3、仓库容器registry为running状态。</p> <p>4、查看registry容器日志，发现仓库容器报错ext4_find_dest_de:1815: inode #1181179: block 4727562: comm registry: bad entry in directory: rec_len % 4 != 0 - offset=0, inode=3671195736, rec_len=19238, name_len=228, size=4096。表示文件系统故障</p> <p>故障原因为文件系统故障</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>修复文件系统</p> </blockquote> <h2><a id="5bridgecurl_81" rel="nofollow"></a>5、bridge模式启动容器，跨节点curl端口不通</h2> <blockquote> <p>在本地使用curl可以curl通，但是在其他节点无法curl通</p> </blockquote> <p><strong>故障原因</strong></p> <blockquote> <p>使用sysctl命令查看系统配置，需要有如下配置：</p> <p>1、net.ipv4.conf.all.forwarding = 1</p> <p>2、net.ipv4.ip_forward = 1</p> <p>如果是ipv6，则需要配置：</p> <p>1、net.ipv6.conf.all.forwarding = 1</p> <p>2、net.ipv6.conf.default.forwarding = 1</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>配置以上信息</p> </blockquote> <h2><a id="6bridge_103" rel="nofollow"></a>6、bridge网络时断时通</h2> <p>nsenter -t 6066 -n ethtool -S eth0</p> <p>查看容器内网络端口号。-t 6066表示容器pid6066</p> <p>ip link show 124</p> <p>ip addr | grep 124</p> <p>打印端口为124的网卡。</p> <p>brctl show</p> <h2><a id="711_117" rel="nofollow"></a>7、容器内1号进程退出，1号进程为业务进程</h2> <p><strong>故障原因</strong></p> <blockquote> <p>1、使用命令docker run -it --entrypoint sh imageID启动容器，替换业务进程为sh</p> <p>2、运行业务进程查看报错原因</p> <p>3、报错为2022-06-02 14:36:09.366 CST watch tls file failed: stat /certs/server.crt: permission denied [main.go:108]</p> <p>4、查看/certs/文件夹权限，使用ls /certs命令报错无权限</p> <p>5、说明/certs文件夹权限不支持该用户访问。该文件夹为-v 映射进容器的文件夹。</p> <p>6、在主机上查看该文件夹权限为 -rwxr–r–.。需要使用setfacl设置权限改为rwxr–r–+。</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>添加/certs文件夹权限。</p> </blockquote> <h2><a id="8_137" rel="nofollow"></a>8、业务侧查询镜像发现没有镜像</h2> <p><strong>故障原因</strong></p> <blockquote> <p>1、docker日志中，02:21:15时刻查询xxx镜像发现不存在，收到load信号开始加载zgis镜像。</p> <p>2、使用lsblk命令找到docker使用的磁盘序号，sar -f /var/log/sa/saxx -d | grep id查看当时环境磁盘负载。环境该时刻io负载冲高，达到100%</p> <p>3、在02:37:03成功load xxx镜像，已超过上层设定的15分钟超时时限导致上层业务报错。</p> <p>4、该问题是由于load镜像时刻环境磁盘负载过高导致。load镜像本身没有问题。</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>降低并发度</p> </blockquote> <h2><a id="9docker_runstartcreated_153" rel="nofollow"></a>9、执行docker run以后，容器没有被start，状态为created</h2> <p><strong>故障原因</strong></p> <blockquote> <p>1、dockerd日志中，只有docker create，没有docker start</p> <p>2、dockerd日志中没有错误信息，说明dockerd流程处于正常状态。如果本身由于docker run失败的话，dockerd日志中是有明确记录的。</p> <p>3、怀疑是在执行docker run命令过程中，这条命令收到了异常信号，导致命令没有执行完退出了。</p> <p>4、通过在docker run过程中，在docker create执行结束以后，docker start执行之前，对执行的这一条docker run命令发起kill -9信号构造出了当前的现象。</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>docker run过程收集报错信息，python脚本中，os.system(“docker run xxx”)错误码如果为9，则是该命令收到了kill -9信号。</p> </blockquote> <h2><a id="10docker_169" rel="nofollow"></a>10、docker状态异常，且无法启动</h2> <p><strong>故障原因</strong></p> <blockquote> <p>1、使用其他非/paasdata/docker目录作为docker根目录可以正常启动docker</p> <p>2、日志中报错位置为创建network相关</p> <p>3、/var/lib/docker/network/files/local-kv.db数据库文件损坏导致，删除该文件，docker启动时自动重构该文件故障解决。</p> </blockquote> <p><strong>解决方法</strong></p> <blockquote> <p>删除/var/lib/docker/network/files/local-kv.db数据库损坏文件，重启docker自动重建该文件。</p> </blockquote> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-50035.htm">Docker基础数据卷容器的说明与共享数据原理详解</a></p>
+                                        <p>下一个：<a href="/news/article-50548.htm">宠物店开不下去了怎么办（宠物店不开了怎么处理）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-25769.htm" title="被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）">被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）</a></li>
+                        <li class="py-2"><a href="/news/article-21608.htm" title="开宠物店难吗（开宠物店难吗赚钱吗）">开宠物店难吗（开宠物店难吗赚钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-free-high-speed-nodes.htm" title="「1月19日」最高速度18.1M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「1月19日」最高速度18.1M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-37625.htm" title="动物疫苗厂家有多少家上市公司 动物疫苗厂家有多少家上市公司呢">动物疫苗厂家有多少家上市公司 动物疫苗厂家有多少家上市公司呢</a></li>
+                        <li class="py-2"><a href="/news/article-20695.htm" title="动物疫苗属于疫苗分类吗为什么没有营养（动物疫苗包括哪些）">动物疫苗属于疫苗分类吗为什么没有营养（动物疫苗包括哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-51054.htm" title="动物医院有公立的吗还是私立医院好呢（动物医院归哪里管）">动物医院有公立的吗还是私立医院好呢（动物医院归哪里管）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-ssr-node.htm" title="「11月9日」最高速度19.2M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「11月9日」最高速度19.2M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-35470.htm" title="动物疫苗价格一览表图片高清大图下载（动物疫苗价格一览表图片高清大图下载）">动物疫苗价格一览表图片高清大图下载（动物疫苗价格一览表图片高清大图下载）</a></li>
+                        <li class="py-2"><a href="/news/article-23901.htm" title="Docker从入门到放弃(1) Docker简介与安装_在线工具">Docker从入门到放弃(1) Docker简介与安装_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-6-clash-windows.htm" title="「1月6日」最高速度19.6M/S，2025年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「1月6日」最高速度19.6M/S，2025年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
