@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-54283.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>彻底搞定kubernetes远程访问</title>
+        <meta name="description" content="kubectl方式远程访问集群 kubectl是kubernetes自带的命令行客户端，安装kubernete集群之后，可以使用kubectl相关的命令访问kubernetes集群资源。kubectl" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-54283.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="彻底搞定kubernetes远程访问" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/0c00594cb5fa1e3ba727cf6f85ae0031.webp" />
+        <meta property="og:release_date" content="2025-02-10T07:38:45" />
+    <meta property="og:updated_time" content="2025-02-10T07:38:45" />
+        <meta property="og:description" content="kubectl方式远程访问集群 kubectl是kubernetes自带的命令行客户端，安装kubernete集群之后，可以使用kubectl相关的命令访问kubernetes集群资源。kubectl" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="彻底搞定kubernetes远程访问">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">彻底搞定kubernetes远程访问</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2><a id="kubectl_0" rel="nofollow"></a>kubectl方式远程访问集群</h2> <p>kubectl是kubernetes自带的命令行客户端，安装kubernete集群之后，可以使用kubectl相关的命令访问kubernetes集群资源。kubectl可以独立在本地安装，来访问远程的kubernetes集群资源。<br /><strong>配置方式</strong>：将远程kubernetes集群~.kube/config文件 拷贝到本地并替换，即可通过kubectl访问远程kubernetes集群</p> <h2><a id="kubectl_proxy_4" rel="nofollow"></a>使用kubectl proxy代理方式</h2> <p>执行如下命令</p> <pre><code class="prism language-bash">$ kubectl proxy --port<span class="token operator">=</span>8080<span class="token operator">&amp;</span></code></pre> <ul> <li>注意这里不仅仅只是可以在kubernetes集群的节点上执行才能达到访问目的，如果已经通过上面提到的方式在本地通过kubectl已经连接到远程集群，那么在本地执行此以下命令也是可以的。此时映射的端口是在执行命令的本地机器上</li> <li>该命令执行后通过curl访问kubernetes接口具有较高的权限，包括查看、删除等</li> </ul> <h2><a id="_kubectl__15" rel="nofollow"></a>不使用 kubectl 代理</h2> <pre><code class="prism language-bash">$ APISERVER<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl config view<span class="token operator">|</span><span class="token function">grep</span> server<span class="token operator">|</span><span class="token function">cut</span> -f 2- -d<span class="token string">":"</span><span class="token operator">|</span><span class="token function">tr</span> -d<span class="token string">" "</span><span class="token variable">)</span></span><span class="token comment">#下面这地方可能会有坑，获取到的token尽量检查一下前面是否有空格，如果有空格，后面即使赋权之后也会报权限错误，注意删除空格</span> $ TOKEN<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl describe secret<span class="token punctuation">$(</span>kubectl get secrets<span class="token operator">|</span><span class="token function">grep</span> default<span class="token operator">|</span><span class="token function">cut</span> -f1 -d<span class="token string">' '</span><span class="token variable">)</span></span><span class="token operator">|</span><span class="token function">grep</span> -E<span class="token string">'^token'</span><span class="token operator">|</span><span class="token function">cut</span> -f2 -d<span class="token string">':'</span><span class="token operator">|</span><span class="token function">tr</span> -d<span class="token string">'\t'</span><span class="token punctuation">)</span> $<span class="token function">curl</span><span class="token variable">$APISERVER</span>/api/v1/namespaces/default/pods  --header<span class="token string">"Authorization: Bearer<span class="token variable">$TOKEN</span>"</span> --insecure<span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"APIVersions"</span>,<span class="token string">"versions"</span><span class="token keyword">:</span><span class="token punctuation">[</span><span class="token string">"v1"</span><span class="token punctuation">]</span>,<span class="token string">"serverAddressByClientCIDRs"</span><span class="token keyword">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span><span class="token string">"clientCIDR"</span><span class="token keyword">:</span><span class="token string">"0.0.0.0/0"</span>,<span class="token string">"serverAddress"</span><span class="token keyword">:</span><span class="token string">"10.0.1.149:443"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span></code></pre> <p>通过这种方式访问kubernetes集群会经过认证、授权、准入控制等环节，所以需要在请求发送时提供证书、token或者账号密码信息。以上示例是提供了TOKEN方式进行了身份认证，其他方式详见<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://k8smeetup.github.io/docs/admin/authentication/"  rel="nofollow">身份认证</a></p> <ul> <li>如果认证失败，会出现以下返，需要确认一下提供的token 或者证书等身份信息是否正确。</li> </ul> <pre><code class="prism language-bash"><span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"Status"</span>,<span class="token string">"apiVersion"</span><span class="token keyword">:</span><span class="token string">"v1"</span>,<span class="token string">"metadata"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>,<span class="token string">"status"</span><span class="token keyword">:</span><span class="token string">"Failure"</span>,<span class="token string">"message"</span><span class="token keyword">:</span><span class="token string">"Unauthorized"</span>,<span class="token string">"reason"</span><span class="token keyword">:</span><span class="token string">"Unauthorized"</span>,<span class="token string">"code"</span><span class="token keyword">:</span> 401<span class="token punctuation">}</span></code></pre> <ul> <li>更常见的我们会遇到类似如下返回</li> </ul> <pre><code class="prism language-bash"><span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"Status"</span>,<span class="token string">"apiVersion"</span><span class="token keyword">:</span><span class="token string">"v1"</span>,<span class="token string">"metadata"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>,<span class="token string">"status"</span><span class="token keyword">:</span><span class="token string">"Failure"</span>,<span class="token string">"message"</span><span class="token keyword">:</span><span class="token string">"pods is forbidden: User \"system:anonymous\" cannot list resource \"pods\" in API group \"\" in the namespace \"default\""</span>,<span class="token string">"reason"</span><span class="token keyword">:</span><span class="token string">"Forbidden"</span>,<span class="token string">"details"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"pods"</span><span class="token punctuation">}</span>,<span class="token string">"code"</span><span class="token keyword">:</span> 403<span class="token punctuation">}</span></code></pre> <p>通过提示信息我们看到没有我们可以通过以下命令来查看，结果发现并没有system:anonymous 这个用户，其实这里的system:anonymous 其实是kubernetes默认配置指定的，kubernetes对于外部请求的身份认证分为认证、授权、准入控制三个层面，所有 未被配置的其他身份验证方法拒绝 的请求被视为匿名请求，并被授予 system:anonymous 用户名和 system:unauthenticated 组（可以通过启动 kubelet 时指定 --anonymous-auth=false 标志来禁止该返回）。所以这里只是说明 我们提供的token 通过了认证，但并没有被授予合适的权限。</p> <pre><code class="prism language-bash">kubectl config view -o jsonpath<span class="token operator">=</span><span class="token string">'{.users[*].name}'</span></code></pre> <p>首先要知道kubernetes中并没有user这个资源对象的概念，对应的有service account这个资源对象，主要用于pod内部访问kubernetes api，通过将关联的 secret挂载到pod实现。但通过curl访问kubernetes api时，我们可以即可以使用use账号来认证授权，也可以通过service account来完成，上面的例子就是通过service account 来访问的，我们只需要解决授权的问题。<br /> 在RBAC这种认证模式下，通过创建ClusterRole/Role进行角色权限定义，指定对某类资源(如pods)的操作权限（get,list,watch,update,create,delete等），然后通过Rolebinding/ClusterRoleBinding去将创建好的角色绑定到 user 或者 service account。</p> <pre><code class="prism language-bash"><span class="token comment">#role定义文件 role.yaml</span><span class="token comment">#使用kubectl create -f role.yaml</span> apiVersion: rbac.authorization.k8s.io/v1 kind: Role metadata:   annotations:     rbac.authorization.kubernetes.io/autoupdate:<span class="token string">"true"</span><span class="token comment"># 此处的 "namespace" 被省略掉是因为 ClusterRoles 是没有命名空间的。</span>   name: role-xingqing rules: - apiGroups:<span class="token punctuation">[</span><span class="token string">""</span><span class="token punctuation">]</span>   resources:<span class="token punctuation">[</span><span class="token string">"pods"</span><span class="token punctuation">]</span>   verbs:<span class="token punctuation">[</span><span class="token string">"get"</span>,<span class="token string">"list"</span>,<span class="token string">"watch"</span>,<span class="token string">"update"</span>,<span class="token string">"create"</span>,<span class="token string">"delete"</span><span class="token punctuation">]</span></code></pre> <pre><code class="prism language-bash">kubectl create rolebinding role-binding-xingqing --role<span class="token operator">=</span>role-xingqing --serviceaccount<span class="token operator">=</span>default:default</code></pre> <p>因为我们的角色是定义的对pods的权限，所以对于pods的接口是可以正常返回的，当你访问其他资源时，就会被禁止</p> <pre><code class="prism language-bash"><span class="token function">curl</span><span class="token variable">$APISERVER</span>/api/v1/namespaces/default/pods  --header<span class="token string">"Authorization: Bearer<span class="token variable">$TOKEN</span>"</span> --insecure                                                       caidongqing@IT-C02Z2CAFLVCF<span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"PodList"</span>,<span class="token string">"apiVersion"</span><span class="token keyword">:</span><span class="token string">"v1"</span>,<span class="token string">"metadata"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token string">"selfLink"</span><span class="token keyword">:</span><span class="token string">"/api/v1/namespaces/default/pods"</span>,<span class="token string">"resourceVersion"</span><span class="token keyword">:</span><span class="token string">"265992975"</span><span class="token punctuation">}</span>,<span class="token string">"items"</span><span class="token keyword">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span>%                                                                                                                                                                                       -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  ~ »<span class="token function">curl</span><span class="token variable">$APISERVER</span>/api/v1/namespaces/default/deployment  --header<span class="token string">"Authorization: Bearer<span class="token variable">$TOKEN</span>"</span> --insecure                                                 caidongqing@IT-C02Z2CAFLVCF<span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"Status"</span>,<span class="token string">"apiVersion"</span><span class="token keyword">:</span><span class="token string">"v1"</span>,<span class="token string">"metadata"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>,<span class="token string">"status"</span><span class="token keyword">:</span><span class="token string">"Failure"</span>,<span class="token string">"message"</span><span class="token keyword">:</span><span class="token string">"deployment is forbidden: User \"system:serviceaccount:default:default\" cannot list resource \"deployment\" in API group \"\" in the namespace \"default\""</span>,<span class="token string">"reason"</span><span class="token keyword">:</span><span class="token string">"Forbidden"</span>,<span class="token string">"details"</span><span class="token keyword">:</span><span class="token punctuation">{<!-- --></span><span class="token string">"kind"</span><span class="token keyword">:</span><span class="token string">"deployment"</span><span class="token punctuation">}</span>,<span class="token string">"code"</span><span class="token keyword">:</span> 403<span class="token punctuation">}</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54282.htm">PHP对象继承</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-26234.htm" title="动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）">动物疫苗经营许可证怎么申请流程视频（动物疫苗经营许可证怎么申请流程视频下载）</a></li>
+                        <li class="py-2"><a href="/news/article-45544.htm" title="学宠物医生上什么学校比较好（学宠物医生这样的专业好不好）">学宠物医生上什么学校比较好（学宠物医生这样的专业好不好）</a></li>
+                        <li class="py-2"><a href="/news/article-24116.htm" title="linux文件编辑VI命令详解_在线工具">linux文件编辑VI命令详解_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-43559.htm" title="Firefox中的HTML5输入类型“数字”">Firefox中的HTML5输入类型“数字”</a></li>
+                        <li class="py-2"><a href="/news/article-27164.htm" title="济南狗狗领养免费平台 济南狗狗领养免费平台有哪些">济南狗狗领养免费平台 济南狗狗领养免费平台有哪些</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-10-free-subscribe-node.htm" title="「1月10日」最高速度20.3M/S，2025年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「1月10日」最高速度20.3M/S，2025年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-43065.htm" title="自己在家怎么做电商没有货（自己在家怎么做电商没有货没人买怎么办啊）">自己在家怎么做电商没有货（自己在家怎么做电商没有货没人买怎么办啊）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-clash-windows.htm" title="「12月6日」最高速度19.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「12月6日」最高速度19.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-47027.htm" title="宠物领养协议书范本最新版下载 宠物领养协议书范本最新版下载图片">宠物领养协议书范本最新版下载 宠物领养协议书范本最新版下载图片</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-29-node-share-links.htm" title="「12月29日」最高速度20.6M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「12月29日」最高速度20.6M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

