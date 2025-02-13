@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-54825.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pandas之数据读取与储存</title>
+        <meta name="description" content="使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：  pd.read_csv() 用于读取csv格式文件 pd.read_excel() 用于读取xls和xlsx格式文件 p" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-54825.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="Pandas之数据读取与储存" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/1c0dd45b1a3ccf569107b332bdcaa223.webp" />
+        <meta property="og:release_date" content="2025-02-11T05:43:49" />
+    <meta property="og:updated_time" content="2025-02-11T05:43:49" />
+        <meta property="og:description" content="使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：  pd.read_csv() 用于读取csv格式文件 pd.read_excel() 用于读取xls和xlsx格式文件 p" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Pandas之数据读取与储存">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">Pandas之数据读取与储存</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：</p> <ul> <li><span style="color:#fe2c24;">pd.read_csv() 用于读取csv格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_excel() 用于读取xls和xlsx格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_json() 用于读取json格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_table() 用于读取txt格式文件</span></li> </ul> <h2><span style="color:#fe2c24;"><strong>CSV文件读取</strong></span></h2> <pre><code>import pandas as pd  df = pd.read_csv("D:/pandas/TOP250.xlsx")#某csv文件</code></pre> <p>首先，调用pandas模块，通过.read_csv()括号内加文件路径读取文件，展示部分结果图，如下：</p> <p><img fetchpriority="high" decoding="async" alt="" height="497" src="http://img.555519.xyz/uploads/20221229/e1a9630ec7d2988edc04c41fcc44816e.jpg"></p> <p>&nbsp;有时，我们并不会读取所有列或所有行，而是有条件的筛选。这时，我们可以在读取时通过增加代码进行筛选。</p> <h3><strong><span style="color:#fe2c24;">一：指定行列</span></strong></h3> <p><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>norws=n 表示读取前n行</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",nrows=5)</code></pre> <p>上述代码表示读取csv文件的前5行，得到的结果如下图：</p> <p><img decoding="async" alt="" height="398" src="http://img.555519.xyz/uploads/20221229/a2bcbe4abc66e664489cd3a14426c4f2.jpg"></p> <p><strong><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skiprows = n,n可以是数值也可以是列表，表示跳过某些行</span></strong></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=3) #表示跳过第三行，读取除了第三行以外的行  df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=[i for i in range(1,11)]) #表示跳过前10行  df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=lambda x: x % 2) #表示跳过偶数行，读取奇数行</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;">&nbsp;&nbsp;<strong>usecols = n,n可以是数值、列表，列表中可以是数值也可以是字段名，表示想要读取的列</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",usecols=[0,2,4]) #上述代码表示读取第一、第三和第五列  #假设第一、第三、第五列的列表名分别为： a,b,c。那么也可以如下代码表达： df = pd.read_csv("D:/pandas/TOP250.xlsx",usecols=['a','b','c'])</code></pre> <p><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;<strong>index_col = n,可以是数值、列表，列表中可以是数值也可以是字段名，表示将n中字段设置为索引列</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",index_col=0) #将第一列作为索引列  df = pd.read_csv("D:/pandas/TOP250.xlsx",index_col='a') #若第一列列名为a，也可以表达为上述代码</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color:#fe2c24;">dtype = {'a':'b',":"},dtype表示字段格式，其中a表示字段名，b表示字段类型</span></strong></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",dtype={'test1':'str','test2':'int'}) #将test1列设置成字符串格式，将test2列设置成int格式</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;"><strong>parse_data = ['','',...],parse_data表示将字段转化成日期格式</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",parse_dates=['date_1']) #表示将date_1的格式转化成日期格式 print(df.dtypes) #结果中有：date_1     datetime64[ns] #说明date_1是日期格式</code></pre> <h2><strong><span style="color:#fe2c24;">二.读取指定文件夹下的文件</span></strong></h2> <p>例如：<span style="color:#fe2c24;">在我的test文件夹中有n个相同类型的xlsx文件，我想将其合并，有如下两种方法</span></p> <p><span style="color:#fe2c24;">方法一：</span></p> <pre><code>import pandas as pd import os  path = 'D:/pandas/test/'  #path文件夹具体位置,文件夹下有你所需的多个xlsx文件  filenames = os.listdir(path) #filename为path下所有的文件的文件名，以列表形式输出  filenames = [i for i in filenames if i.lower().endswith('.xlsx)] #这行代码是为了得到以.xlsx为结尾的文件名，并形成列表  lis = []#创建一个新列表，用于放数据  for i in filenames:     lis.append(pd.read_excel(path + filename)) #遍历文件，通过pd.read_excel读取xlsx文件并通过append合并  df1 = pd.concat(lis) #将列表lis合并生成一个文件  df1.to_excel(存放地址,index=False) #保存文件 </code></pre> <p><span style="color:#fe2c24;">方法二：</span></p> <pre><code>import glob import pandas as pd import os  paths = glob.glob("D:/pandas/test/*.xlsx") #表示读取test文件下所有的.xlsx文件，生成列表  data1 = pd.DataFrame() #创建一个新的DataFrame框架  for path in paths:     data = pd.read_excel(path)     data1 = pd.concat([data1,data]) #遍历文件读取并合并，放入data1中，生成一个新的合并后的文件  df.to_excel(存放地址,index=False)</code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54283.htm">彻底搞定kubernetes远程访问</a></p>
+                                        <p>下一个：<a href="/news/article-54826.htm">中国宠物食品行业十大质量品牌排行榜（国内宠物食品企业排名）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-12-free-ssr-node.htm" title="「1月12日」最高速度19.3M/S，2025年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「1月12日」最高速度19.3M/S，2025年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-21-free-clash.htm" title="「1月21日」最高速度22.9M/S，2025年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「1月21日」最高速度22.9M/S，2025年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-node-subscribe.htm" title="「2月8日」最高速度18.3M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「2月8日」最高速度18.3M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-clash-node.htm" title="「12月31日」最高速度20.5M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「12月31日」最高速度20.5M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-52135.htm" title="广东领养宠物群微信怎么加（广东动物领养中心）">广东领养宠物群微信怎么加（广东动物领养中心）</a></li>
+                        <li class="py-2"><a href="/news/article-40588.htm" title="动物医院诊疗系统有哪些设备（动物医院诊疗程序）">动物医院诊疗系统有哪些设备（动物医院诊疗程序）</a></li>
+                        <li class="py-2"><a href="/news/article-21609.htm" title="海贼王修佐（海贼王修佐vs鼹鼠）">海贼王修佐（海贼王修佐vs鼹鼠）</a></li>
+                        <li class="py-2"><a href="/news/article-20696.htm" title="兽用疫苗经营许可证需要什么条件（兽用疫苗销售资质）">兽用疫苗经营许可证需要什么条件（兽用疫苗销售资质）</a></li>
+                        <li class="py-2"><a href="/news/article-47026.htm" title="宠物医院好评模板100字怎么写的呀（宠物医院好评语30字通用）">宠物医院好评模板100字怎么写的呀（宠物医院好评语30字通用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-clash-v2ray-ss-ssr.htm" title="「11月15日」最高速度21.9M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「11月15日」最高速度21.9M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
