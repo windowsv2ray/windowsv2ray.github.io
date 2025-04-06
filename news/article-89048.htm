@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-89048.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>解决Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/问题</title>
+        <meta name="description" content="昨天在使用docker 时，将 image 文件从仓库抓取到本地一直报错，经过尝试，终于得以解决。 错误信息如下：  [root@archlinux ~]# docker image pull lib" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-89048.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="解决Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/问题" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/782d3e0d29fbdb2e7887d875be2f95d0.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:19:33" />
+    <meta property="og:updated_time" content="2025-04-05T08:19:33" />
+        <meta property="og:description" content="昨天在使用docker 时，将 image 文件从仓库抓取到本地一直报错，经过尝试，终于得以解决。 错误信息如下：  [root@archlinux ~]# docker image pull lib" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="解决Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">解决Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/问题</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>昨天在使用docker 时，将 image 文件从仓库抓取到本地一直报错，经过尝试，终于得以解决。</p> <p>错误信息如下：</p> <blockquote> <p>[root@archlinux ~]# docker image pull library/hello-world<br /> Using default tag: latest<br /> Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/latest: dial tcp 52.20.146.203:443: i/o timeout</p> </blockquote> <p>或者：</p> <blockquote> <p>[root@archlinux quanxj]# docker image pull library/hello-world<br /> Using default tag: latest<br /> latest: Pulling from library/hello-world<br /> ca4f61b1923c: Pull complete<br /> error pulling image configuration: Get https://registry-1.docker.io/v2/library/hello-world/blobs/sha256:f2a91732366c0332ccd7afd2a5c4ff2b9af81f549370f7a19acd460f87686bc7: dial tcp 35.169.231.249:443: i/o timeout</p> </blockquote> <p>解决方法如下：</p> <p>**第一步：**通过<code>dig @114.114.114.114 registry-1.docker.io</code>找到可用IP</p> <blockquote> <p>[root@archlinux ~]# dig @114.114.114.114 registry-1.docker.io<br /> ; &lt;&lt;&gt;&gt; DiG 9.12.0 &lt;&lt;&gt;&gt; @114.114.114.114 registry-1.docker.io<br /> ; (1 server found)<br /> ;; global options: +cmd<br /> ;; Got answer:<br /> ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 37534<br /> ;; flags: qr rd ra; QUERY: 1, ANSWER: 8, AUTHORITY: 0, ADDITIONAL: 1<br /> ;; OPT PSEUDOSECTION:<br /> ; EDNS: version: 0, flags:; udp: 4096<br /> ; COOKIE: 88f87a15f4ca45dc (echoed)<br /> ;; QUESTION SECTION:<br /> ;registry-1.docker.io. IN A<br /> ;; ANSWER SECTION:<br /> registry-1.docker.io. 30 IN A 34.200.28.105<br /> registry-1.docker.io. 30 IN A 52.22.181.254<br /> registry-1.docker.io. 30 IN A 35.169.231.249<br /> registry-1.docker.io. 30 IN A 52.5.185.86<br /> registry-1.docker.io. 30 IN A 54.164.230.151<br /> registry-1.docker.io. 30 IN A 34.200.90.16<br /> registry-1.docker.io. 30 IN A 52.20.146.203<br /> registry-1.docker.io. 30 IN A 52.206.156.207<br /> ;; Query time: 116 msec<br /> ;; SERVER: 114.114.114.114#53(114.114.114.114)<br /> ;; WHEN: 四 3月 08 09:27:12 CST 2018<br /> ;; MSG SIZE rcvd: 189</p> </blockquote> <p>第二步：尝试修改<code>/etc/hosts</code>强制docker.io相关的域名解析到其它可用IP</p> <blockquote> <p>vim /etc/hosts</p> </blockquote> <p>添加一个可用IP：</p> <blockquote> <p>52.5.185.86 registry-1.docker.io</p> </blockquote> <p>保存之后重试:</p> <blockquote> <p>[root@archlinux quanxj]# docker image pull library/hello-world<br /> Using default tag: latest<br /> latest: Pulling from library/hello-world<br /> ca4f61b1923c: Already exists<br /> Digest: sha256:083de497cff944f969d8499ab94f07134c50bcf5e6b9559b27182d3fa80ce3f7<br /> Status: Downloaded newer image for hello-world:latest</p> </blockquote> <p>验证：</p> <blockquote> <p>[root@archlinux quanxj]# docker image ls<br /> REPOSITORY TAG IMAGE ID CREATED SIZE<br /> hello-world latest f2a91732366c 3 months ago 1.85kB</p> </blockquote> <p>成功！</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88324.htm">兰州卖狗粮的地方（兰州哪里有卖狗粮的地方）</a></p>
+                                        <p>下一个：<a href="/news/article-89049.htm">天津宠物领养平台排名（天津宠物领养救助中心在哪）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-80495.htm" title="宠物领养平台app推荐下载苹果手机（宠物领养平台app推荐下载苹果手机软件）">宠物领养平台app推荐下载苹果手机（宠物领养平台app推荐下载苹果手机软件）</a></li>
+                        <li class="py-2"><a href="/news/article-86190.htm" title="领养宠物怎么领养的呢（领养宠物流程图）">领养宠物怎么领养的呢（领养宠物流程图）</a></li>
+                        <li class="py-2"><a href="/news/article-83326.htm" title="狗粮在哪里进货（狗粮在哪里进货渠道）">狗粮在哪里进货（狗粮在哪里进货渠道）</a></li>
+                        <li class="py-2"><a href="/news/article-89798.htm" title="宠物领养app设计（宠物领养app该如何设计）">宠物领养app设计（宠物领养app该如何设计）</a></li>
+                        <li class="py-2"><a href="/news/article-79151.htm" title="动物疫苗注射工作注意事项和要求有哪些（动物疫苗的使用）">动物疫苗注射工作注意事项和要求有哪些（动物疫苗的使用）</a></li>
+                        <li class="py-2"><a href="/news/article-71704.htm" title="狗粮猫粮加工设备有哪些牌子（猫粮狗粮加工机器）">狗粮猫粮加工设备有哪些牌子（猫粮狗粮加工机器）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-free-v2ray-subscribe.htm" title="「3月16日」最高速度22.2M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「3月16日」最高速度22.2M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-69086.htm" title="iOS全埋点解决方案-应用退出和启动">iOS全埋点解决方案-应用退出和启动</a></li>
+                        <li class="py-2"><a href="/news/article-66523.htm" title="动物疫苗公司排名前十名（动物疫苗公司10强）">动物疫苗公司排名前十名（动物疫苗公司10强）</a></li>
+                        <li class="py-2"><a href="/news/article-70383.htm" title="南京领养狗狗多少钱（南京市宠物领养）">南京领养狗狗多少钱（南京市宠物领养）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
