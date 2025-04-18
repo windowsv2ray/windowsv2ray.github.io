@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-96518.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>深入理解 Go 中的字符串_Golang</title>
+        <meta name="description" content="目录  字符串的本质 字符串的底层原理    字符串的本质 在编程语言中，字符串发挥着重要的角色。字符串背后的数据结构一般有两种类型：  一种在编译时指定长度，不能修改 一种具有动态的长度，可以修改。" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-96518.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="深入理解 Go 中的字符串_Golang" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/782d3e0d29fbdb2e7887d875be2f95d0.webp" />
+        <meta property="og:release_date" content="2025-04-15T06:01:26" />
+    <meta property="og:updated_time" content="2025-04-15T06:01:26" />
+        <meta property="og:description" content="目录  字符串的本质 字符串的底层原理    字符串的本质 在编程语言中，字符串发挥着重要的角色。字符串背后的数据结构一般有两种类型：  一种在编译时指定长度，不能修改 一种具有动态的长度，可以修改。" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深入理解 Go 中的字符串_Golang">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">深入理解 Go 中的字符串_Golang</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">字符串的本质</a></li> <li><a href="#_label1" rel="nofollow">字符串的底层原理</a></li> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>字符串的本质</h2> <p>在编程语言中，字符串发挥着重要的角色。<strong>字符串背后的数据结构一般有两种类型：</strong></p> <ul> <li>一种在编译时指定长度，不能修改</li> <li>一种具有动态的长度，可以修改。</li> </ul> <p><strong>比如：</strong>与Python 中的字符串一样，Go 语言中的字符串不能被修改，只能被访问。<br />在 Python 中，<strong>如果改变一个字符串的值会得到如下结果：</strong></p> <div class="ay1code"> <pre class="brush:go;">&gt;&gt;&gt; hi = "Hello"  &gt;&gt;&gt; hi  'Hello'  &gt;&gt;&gt; hi[0] = 'h'  Traceback (most recent call last):  File "&lt;stdin&gt;", line 1, in &lt;module&gt;  TypeError: 'str' object does not support item assignment  &gt;&gt;&gt;</pre> </div> <p><strong>同理，在 Go 中也一样：</strong></p> <div class="ay1code"> <pre class="brush:go;">package main  import "fmt"  func main() {  var hello = "Hello"  hello[1] = 'h'  fmt.Println(hello)  }  // # command-line-arguments  // string_in_go/main.go:8:11: cannot assign to hello[1] (strings are immutable)</pre> </div> <p><strong>字符串的终止方式有两种：</strong></p> <ul> <li>一种是 C 语言的隐式声明，以字符 “\0” 作为终止符</li> <li>一种是 Go 语言的显式声明</li> </ul> <p><strong>Go 语言的 string 的表示结构如下：</strong></p> <div class="ay1code"> <pre class="brush:go;">type StringHeader struct {  Data uintptr // Data 指向底层的字符数组  Len int // Len 用来表示字符串的长度  }</pre> </div> <p>字符串的<strong>本质</strong>上是一串字符数组，每个字符都在存储时对应了一个或多个整数。用这些整数来表示字符，比如打印 <code>hello</code> 的字节数组如下：</p> <div class="ay1code"> <pre class="brush:go;">package main  import "fmt"  func main() {  var hello = "Hello"  for i := 0; i &lt; len(hello); i++ {  fmt.Printf("%x ", hello[i])  }  }  // Output: 48 65 6c 6c 6f</pre> </div> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>字符串的底层原理</h2> <p><strong>字符串有特殊标识，有两种声明方式：</strong></p> <blockquote> <p>var s1 string = `hello world`<br />var s2 string = "hello world"</p> </blockquote> <p>字符串常量在词法解析阶段最终会被标记为 StringLit 类型的 Token 并被传递到编译的下一个阶段。<br />在语法分析阶段，采取递归下降的方式读取 UTF-8 字符，单撇号或双引号是字符串的标识。</p> <p><strong>分析的逻辑位于  syntax/scanner.go 文件中:</strong></p> <div class="ay1code"> <pre class="brush:go;">func (s *scanner) stdString() {  ok := true  s.nextch()  for {  if s.ch == '"' {  s.nextch()  break  }  if s.ch == '\\' {  s.nextch()  if !s.escape('"') {  ok = false  }  continue  }  if s.ch == '\n' {  s.errorf("newline in string")  ok = false  break  }  if s.ch &lt; 0 {  s.errorAtf(0, "string not terminated")  ok = false  break  }  s.nextch()  }  s.setLit(StringLit, ok)  }  func (s *scanner) rawString() {  ok := true  s.nextch()  for {  if s.ch == '`' {  s.nextch()  break  }  if s.ch &lt; 0 {  s.errorAtf(0, "string not terminated")  ok = false  break  }  s.nextch()  }  // We leave CRs in the string since they are part of the  // literal (even though they are not part of the literal  // value).  s.setLit(StringLit, ok)  }</pre> </div> <p>从上面的代码可以看到，Go 中有两种字符串的检查：一种是标准字符串以双引号定义 <code>""</code>，如 <code>"Hello,World"</code>, 还有一种是原始字符串，用 \<code>\</code> 定义的， 因此针对两种字符串有两种语法分析函数：</p> <ul> <li>如果是单撇号，则调用 <code>rawString </code>函数</li> <li>如果是双引号，则调用 <code>stdString</code> 函数</li> </ul> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95771.htm">广州宠物饲料批发市场地址查询（广州宠物饲料加工厂）</a></p>
+                                        <p>下一个：<a href="/news/article-96519.htm">宠物粮食市场前景怎么样啊视频讲解（宠物粮市场分析）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-1-clash-windows.htm" title="「4月1日」最高速度20.1M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「4月1日」最高速度20.1M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-node-share.htm" title="「3月22日」最高速度18.9M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接">「3月22日」最高速度18.9M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-74388.htm" title="希尔排序（Java语言实现）">希尔排序（Java语言实现）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-node.htm" title="「3月7日」最高速度18.9M/S，2025年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接">「3月7日」最高速度18.9M/S，2025年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-91206.htm" title="宠物免费领养平台下载手机版大全的简单介绍">宠物免费领养平台下载手机版大全的简单介绍</a></li>
+                        <li class="py-2"><a href="/news/article-67169.htm" title="宠物粮在哪里批发的便宜（宠物粮在哪里批发的便宜些）">宠物粮在哪里批发的便宜（宠物粮在哪里批发的便宜些）</a></li>
+                        <li class="py-2"><a href="/news/article-93514.htm" title="动物疫苗经销商名单 动物疫苗经销商名单查询">动物疫苗经销商名单 动物疫苗经销商名单查询</a></li>
+                        <li class="py-2"><a href="/news/article-88323.htm" title="linux安装离线docker包教程,Centos7离线安装Docker">linux安装离线docker包教程,Centos7离线安装Docker</a></li>
+                        <li class="py-2"><a href="/news/article-93511.htm" title="宠物免费领养绑定消费（宠物免费领养是真的吗）">宠物免费领养绑定消费（宠物免费领养是真的吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-12-free-node-subscribe.htm" title="「4月12日」最高速度21.6M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「4月12日」最高速度21.6M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
