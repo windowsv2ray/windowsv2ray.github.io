@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://windowsv2ray.github.io/news/article-111541.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>node.js &#8212; 身份认证</title>
+        <meta name="description" content="请问昨天结束的早是对堆积在了今天吗，今天还来加个班更博，看在这个毅力的份上能否给亿点点推荐。 有个好消息有个坏消息，先说坏消息吧，就是在这么学下去我急需急支糖浆，来回顾回顾前面的知识，这几天学的太急了" />
+        <link rel="icon" href="/assets/website/img/windowsv2ray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Windows V2ray分享订阅站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://windowsv2ray.github.io/news/article-111541.htm" />
+    <meta property="og:site_name" content="Windows V2ray分享订阅站" />
+    <meta property="og:title" content="node.js &#8212; 身份认证" />
+    <meta property="og:image" content="https://windowsv2ray.github.io/uploads/20240604/60b6d84a3f77635ab81031e536c7d1f3.webp" />
+        <meta property="og:release_date" content="2025-05-04T09:28:45" />
+    <meta property="og:updated_time" content="2025-05-04T09:28:45" />
+        <meta property="og:description" content="请问昨天结束的早是对堆积在了今天吗，今天还来加个班更博，看在这个毅力的份上能否给亿点点推荐。 有个好消息有个坏消息，先说坏消息吧，就是在这么学下去我急需急支糖浆，来回顾回顾前面的知识，这几天学的太急了" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="node.js &#8212; 身份认证">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/animate/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/maicons.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/windowsv2ray/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/website/css/windowsv2ray/theme.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN82W0GJX5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN82W0GJX5');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                                <span>Windows V2ray</span>
+                                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+                                                <li class="nav-item">
+                            <a href="/" class="nav-link">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/free-nodes/" class="nav-link">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/paid-subscribe/" class="nav-link">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/client.htm" class="nav-link">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="/news/" class="nav-link">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-10">
+                        <h1 class="text-center">node.js &#8212; 身份认证</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<p>请问昨天结束的早是对堆积在了今天吗，今天还来加个班更博，看在这个毅力的份上能否给亿点点推荐。</p> <p>有个好消息有个坏消息，先说坏消息吧，就是在这么学下去我急需急支糖浆，来回顾回顾前面的知识，这几天学的太急了，搞得有点推着走的意思，好消息就是今天的内容是最后最后node的基础内容了，果然天不负我，整完然后有两个大案例，做完我就从上次复习那里开始一直复习过来，然后全部不欠账，就昂首挺胸的走进vue了，等等，这个学完可以进去了吧。</p> <p>1.</p> <p>今天的第一个内容说一下web开发模式，今天基本就是讲一个身份认证的内容，我们的web开发模式呢分为两种，一种是服务器渲染模式，就是通过服务器进行一个字符串拼接，将html页面拼接出来，然后直接返回给客户端，这样一来就不需要我们的ajax了，直接给客户端就可以了，他的优点呢就是前端耗时少，毕竟都给服务器做了还有前端什么事，还有他也有利于seo优化，他的缺点就是占用服务器资源，而且不利于前后端分离开发效率低。</p> <p>第二个模式：前后端分离的模式，它是依赖于ajax的一个广泛应用，后端负责编写api接口，前端就负责调用接口就完事了。他的一个优点就是开发体验好、毕竟前后端分离，用户体验也好，也减轻了服务器的压力。</p> <p>但是缺点就是不利于seo的优化。</p> <p>2</p> <p>然后我们进入身份认证、</p> <p>什么事身份认证？</p> <p>通过一定的手段对用户身份进行确认的方式。</p> <p>服务器渲染开发用的就是session认证，而我们的前后端分离用的就是jwt认证，两者都各有各的优点谁也不让谁。</p> <p>3.</p> <p>先来说下session吧</p> <p>首先了解一下http无状态性，就是指客户端每次的http请求都是独立的，连续多个请求间没有直接关系，服务器也不会主动保留每次http请求状态（就像收银员他能记住每个来的客户是会员吗？）</p> <p>突破无状态限制。</p> <p>超市突破这种限制的方式就是给每个会员发会员卡是吧，在我们web领域这种方式就是cookie。</p> <p>cookie，是存储在用户浏览器一段不超过4kb的字符串，它是由name、value以及有效期。安全性，适用范围的可选属性组成，在不同的域名下，我们的cookie是各自独立的，每当客户端发起请求，会自动把当前域名下的所有cookie发给服务器，注意只是当前域名下。</p> <p>他的特性就是：自动发送、域名独立、过期时限、4kb限制</p> <p>3.1</p> <p>cookie在身份认证中的作用</p> <p>当我们客户端第一次请求服务器的时候，服务器会通过响应头向客户端发送一个身份认证的cookie，我们的浏览器就会把这个cookie存储起来，当我们下一次 请求的时候，就会直接发送这个cookie也就是前面说的会自动发送，即可证明身份。</p> <p>要注意我们的cookie是不具有安全性的，浏览器还提供了读写cookie的api，所以cookie很容易被伪造，就像我们的会员卡也有伪造的一样。所以不要用cookie存储重要数据，包括我们jwt也不能存后面会说到。</p> <p>3.2</p> <p>那么有没有方法来提高我们cookie的安全性呢？</p> <p>那就是session认证，就好比我们的会员卡➕刷卡的机制就能破除伪造卡了。</p> <p>session认证机制：</p> <p>首先我们的客户端登录账号密码发送了登录请求，服务器会开始验证，当验证成功后，会将其存储在服务器的内存中，同时通过响应头返回一个对应的cookie字符串，我们的浏览器就会把这个字符串保存在当前域名下，当我们再次请求的时候，就会把域名下所有cookie一起发送服务器，服务器就会去找对只对应的cookie匹配成功就能找到你信息了，然后就认证成功了</p> <p>3.3</p> <p>说了这么多怎么来再服务器端使用我们的sesson，首先安装导入两部曲然后还需要配置，注意配置是固定写法，secret是可以为任意字符串的。</p> <p>配置过后就可以用req.session来访问session对象了，将我们的一些数据用sessin存储起来，然后登陆成功又可以通过session取出来，当我们退出登录还可以。destroy方法清空session，注意只是清空这个账户信息，不会清空别人的信息，具体代码如下：</p> <p>注意看todo也就是我们要做的</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 导入 express 模块</span> const express = require('express'<span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 创建 express 的服务器实例</span> const app =<span style="color: rgba(0, 0, 0, 1)"> express()</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_01：请配置 Session 中间件</span> const session = require('express-session'<span style="color: rgba(0, 0, 0, 1)">) app.use(session({   secret :</span>'mySession'<span style="color: rgba(0, 0, 0, 1)">,   resave :</span>'false'<span style="color: rgba(0, 0, 0, 1)">,   saveUninitiallized:</span>'ture'<span style="color: rgba(0, 0, 0, 1)"> }))</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 托管静态页面</span> app.use(express.static('./pages'<span style="color: rgba(0, 0, 0, 1)">))</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 解析 POST 提交过来的表单数据</span> app.use(express.urlencoded({ extended:<span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)"> }))</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 登录的 API 接口</span> app.post('/api/login', (req, res) =&gt;<span style="color: rgba(0, 0, 0, 1)"> {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 判断用户提交的登录信息是否正确</span><span style="color: rgba(0, 0, 255, 1)">if</span> (req.body.username !== 'admin' || req.body.password !== '000000'<span style="color: rgba(0, 0, 0, 1)">) {</span><span style="color: rgba(0, 0, 255, 1)">return</span> res.send({ status: 1, msg: '登录失败'<span style="color: rgba(0, 0, 0, 1)"> })   }</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_02：请将登录成功后的用户信息，保存到 Session 中</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 注意只有当上面配置了session之后才能够使用req.session这个对象</span>   req.session.user = req.body<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 用户信息</span>   req.session.islogin =<span style="color: rgba(0, 0, 255, 1)">true</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 用户的登录状态</span><span style="color: rgba(0, 0, 0, 1)">    res.send({ status:</span>0, msg: '登录成功'<span style="color: rgba(0, 0, 0, 1)"> }) })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 获取用户姓名的接口</span> app.get('/api/username', (req, res) =&gt;<span style="color: rgba(0, 0, 0, 1)"> {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_03：请从 Session 中获取用户的名称，响应给客户端</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 判断是否登录成功</span><span style="color: rgba(0, 0, 255, 1)">if</span>(!<span style="color: rgba(0, 0, 0, 1)">req.session.islogin) {</span><span style="color: rgba(0, 0, 255, 1)">return</span> res.send({status:1, msg:'fail'<span style="color: rgba(0, 0, 0, 1)">})   }</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 登录成功即可响应数据</span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> res.send({     status :</span>0<span style="color: rgba(0, 0, 0, 1)">,     msg :</span>'success'<span style="color: rgba(0, 0, 0, 1)">,     username : [req.session.user.username]   }) })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 退出登录的接口</span> app.post('/api/logout', (req, res) =&gt;<span style="color: rgba(0, 0, 0, 1)"> {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_04：清空 Session 信息</span><span style="color: rgba(0, 0, 0, 1)">  req.session.destroy()   res.send({     status :</span>0<span style="color: rgba(0, 0, 0, 1)">,     msg :</span>'退出登录成功'<span style="color: rgba(0, 0, 0, 1)">   }) })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 调用 app.listen 方法，指定端口号并启动web服务器</span> app.listen(80,<span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> () {   console.log(</span>'Express server running at http://127.0.0.1:80'<span style="color: rgba(0, 0, 0, 1)">) })</span></pre> </div> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/276f4ebc0e5a939b0376a1745e6cd288.jpg" alt="node.js -- 身份认证"></p> <p>3.</p> <p>这就是session，然后我们看到下一个认证机制jwt，session需要cookie才能够实现是吧，但我们的cookie有一个致命问题，不支持跨域，如果涉及到跨域需要配置很大一堆步骤。</p> <p>JWT目前最流行跨域认证解决方案。</p> <p>实现原理：首先还是客户端发起一个请求头发送账号密码，服务器验证，验证成功后会经过加密生辰一个token字符串然后会给你返回一个token字符串，我们拿到这个token字符串会将其存储在localstorage或者sessionStorage中，当我们再次请求就会通过一个authorization的请求头将token发送给服务器，服务器拿到token就会将他还原成用户的信息对象，然后身份也就认证成功了。</p> <p>JWT的组成部分是有三部分组成：header。patyload。signature，这个。只是分割作用，我们的真正信息重在中间的payload前后两个只是保证token的安全性。</p> <p>怎么在express中来使用我们的token？</p> <p>需要安装两个包，还需要定义密匙是自己自定义的</p> <p>第四步生成JWT字符串的时候在sign这个方法里面，这个配置有效期是token在规定期限之内能够拿来验证的期限；</p> <p>第五步将jwt转换为json这个语句当中，unless这个语句的意思是不需要身份验证的接口</p> <p>配置完第五步转换为json文件后我们就可以用req.user来获取信息了，而这个信息就是我们第四步把什么转换为jwt字符串的信息，</p> <p>最后当我们的token过期或者不合法就会出现错误，这个时候要需要一个错误中间件</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 导入 express 模块</span> const express = require('express'<span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 创建 express 的服务器实例</span> const app =<span style="color: rgba(0, 0, 0, 1)"> express()</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_01：安装并导入 JWT 相关的两个包，分别是 jsonwebtoken 和 express-jwt</span> const jwt = require('jsonwebtoken'<span style="color: rgba(0, 0, 0, 1)">) const expressJwt</span>= require('express-jwt'<span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 允许跨域资源共享</span> const cors = require('cors'<span style="color: rgba(0, 0, 0, 1)">) app.use(cors())</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 解析 post 表单数据的中间件</span> const bodyParser = require('body-parser'<span style="color: rgba(0, 0, 0, 1)">) const { UnauthorizedError }</span>= require('express-jwt'<span style="color: rgba(0, 0, 0, 1)">) const { response }</span>= require('express'<span style="color: rgba(0, 0, 0, 1)">) app.use(bodyParser.urlencoded({ extended:</span><span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)"> }))</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_02：定义 secret 密钥，建议将密钥命名为 secretKey</span> const secretKey = 'hard hard study day day up'<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_04：注册将 JWT 字符串解析还原成 JSON 对象的中间件</span> app.use(expressJwt({secret : secretKey, algorithms : ['HS256']}).unless({path : [/^\/api\//<span style="color: rgba(0, 0, 0, 1)">]}))</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 登录接口</span> app.post('/api/login',<span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> (req, res) {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 将 req.body 请求体中的数据，转存为 userinfo 常量</span>   const userinfo =<span style="color: rgba(0, 0, 0, 1)"> req.body</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 登录失败</span><span style="color: rgba(0, 0, 255, 1)">if</span> (userinfo.username !== 'admin' || userinfo.password !== '000000'<span style="color: rgba(0, 0, 0, 1)">) {</span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> res.send({       status:</span>400<span style="color: rgba(0, 0, 0, 1)">,       message:</span>'登录失败！'<span style="color: rgba(0, 0, 0, 1)">     })   }</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 登录成功</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_03：在登录成功之后，调用 jwt.sign() 方法生成 JWT 字符串。并通过 token 属性发送给客户端</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 转化成token加密文件</span>   const tokenStr = jwt.sign({username : userinfo.username, algorithms : ['HS256']}, secretKey, {expiresIn : '1h'<span style="color: rgba(0, 0, 0, 1)">})   res.send({     status:</span>200<span style="color: rgba(0, 0, 0, 1)">,     message:</span>'登录成功！'<span style="color: rgba(0, 0, 0, 1)">,     token: tokenStr</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 要发送给客户端的 token 字符串</span><span style="color: rgba(0, 0, 0, 1)">  }) })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 这是一个有权限的 API 接口</span> app.get('/admin/getinfo',<span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> (req, res) {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_05：使用 req.user 获取用户信息，并使用 data 属性将用户信息发送给客户端</span><span style="color: rgba(0, 0, 0, 1)">     res.send({     status:</span>200<span style="color: rgba(0, 0, 0, 1)">,     message:</span>'获取用户信息成功！'<span style="color: rgba(0, 0, 0, 1)">,     data: {username : req.user}</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 要发送给客户端的用户信息</span><span style="color: rgba(0, 0, 0, 1)">  }) })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> TODO_06：使用全局错误处理中间件，捕获解析 JWT 失败后产生的错误</span> app.use((err, req, res, next) =&gt;<span style="color: rgba(0, 0, 0, 1)"> {</span><span style="color: rgba(0, 0, 255, 1)">if</span> (err.name === 'UnauthorizedError'<span style="color: rgba(0, 0, 0, 1)">) {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 这次错误是由token解析失败导致的</span><span style="color: rgba(0, 0, 255, 1)">return</span> res.send({status : 401, msg : '无效的token'<span style="color: rgba(0, 0, 0, 1)">})   }</span><span style="color: rgba(0, 0, 255, 1)">else</span><span style="color: rgba(0, 0, 0, 1)"> {</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 其他错误</span><span style="color: rgba(0, 0, 255, 1)">return</span> res.send({status: 500, msg : '未知的错误'<span style="color: rgba(0, 0, 0, 1)">})   } })</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 调用 app.listen 方法，指定端口号并启动web服务器</span> app.listen(8888,<span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> () {   console.log(</span>'Express server running at http://127.0.0.1:8888'<span style="color: rgba(0, 0, 0, 1)">) })</span></pre> </div> <p>然后后面会有两个项目，会把之前所学的node综合起来，我到时候单独开个博来说一下吧，还是有一些注意事项的</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-110597.htm">动物疫苗价格查询官网网址是多少号 动物疫苗价格查询官网网址是多少号啊</a></p>
+                                        <p>下一个：<a href="/news/article-111542.htm">成人自考校考一般都会让过吗（自考里面的校考容易过吗）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-91207.htm" title="叫猫过来的手势野猫（叫猫过来的手势野猫会叫吗）">叫猫过来的手势野猫（叫猫过来的手势野猫会叫吗）</a></li>
+                        <li class="py-2"><a href="/news/article-104869.htm" title="南京猫咪领养（南京猫咪领养吧）">南京猫咪领养（南京猫咪领养吧）</a></li>
+                        <li class="py-2"><a href="/news/article-111542.htm" title="成人自考校考一般都会让过吗（自考里面的校考容易过吗）">成人自考校考一般都会让过吗（自考里面的校考容易过吗）</a></li>
+                        <li class="py-2"><a href="/news/article-102343.htm" title="进口猫粮推荐表（推荐的进口猫粮）">进口猫粮推荐表（推荐的进口猫粮）</a></li>
+                        <li class="py-2"><a href="/news/article-92744.htm" title="go-micro使用Consul做服务发现的方法和原理_在线工具">go-micro使用Consul做服务发现的方法和原理_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-105526.htm" title="宠物粮生产设备哪家好（宠物粮生产设备哪家好一点）">宠物粮生产设备哪家好（宠物粮生产设备哪家好一点）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-12-free-node-subscribe.htm" title="「4月12日」最高速度21.6M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「4月12日」最高速度21.6M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-88323.htm" title="linux安装离线docker包教程,Centos7离线安装Docker">linux安装离线docker包教程,Centos7离线安装Docker</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-26-clash-windows.htm" title="「4月26日」最高速度21.5M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「4月26日」最高速度21.5M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-95771.htm" title="广州宠物饲料批发市场地址查询（广州宠物饲料加工厂）">广州宠物饲料批发市场地址查询（广州宠物饲料加工厂）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    </main>
+        <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 py-2">
+                    <p id="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        Windows V2ray分享订阅站 版权所有 Powered by WordPress
+                    </p>
+                </div>
+                <div class="col-sm-6 py-2 text-right">
+                    <div class="d-inline-block px-3">
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </footer> <!-- .page-footer -->
+    <script src="/assets/website/js/frontend/windowsv2ray/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/wow/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/animateNumber/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/windowsv2ray/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
