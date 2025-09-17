@@ -1,4 +1,3 @@
 User-agent: *
 Disallow:
 Disallow: /bin/
-Sitemap: https://androidclash.github.io/sitemap.xml
