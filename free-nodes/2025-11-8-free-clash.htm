@@ -141,41 +141,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的日志记录如何帮助排错？</h5></div>
-    <div class="panel-body">
-        WinXray 提供详细的连接日志，包括入站、出站流量信息及错误提示。通过查看日志，用户可以快速定位连接失败、节点不可达或配置错误的原因，提高问题解决效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的节点订阅更新是否可定时执行？</h5></div>
-    <div class="panel-body">
-        是的。Nekoray 可以设置订阅更新频率，如每天或每小时。程序会自动下载更新节点并替换旧节点，保证用户始终使用最新线路。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 的节点分组管理有哪些优势？</h5></div>
-    <div class="panel-body">
-        节点分组可按用途、地区或延迟分类，结合策略组实现自动分流。方便用户管理大量节点，快速选择最佳节点，提高访问速度和连接稳定性，同时优化维护效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 的 Web Dashboard 有哪些功能？</h5></div>
-    <div class="panel-body">
-        Mihomo 的 Web 控制面板允许用户可视化管理节点、分流规则、日志查看与系统状态监控。可通过浏览器访问 Dashboard 地址进行远程管理，方便多设备统一控制。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
-    <div class="panel-body">
-        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的自定义规则组能实现哪些功能？</h5></div>
-    <div class="panel-body">
-        Clash 的自定义规则组允许用户将多个节点和策略组合，通过优先级和条件分流流量。这样可以根据网站类别或流量类型自动选择最优节点，提高网络效率和使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 可以导入哪些格式的规则文件？</h5></div>
     <div class="panel-body">
         Surfboard 支持 YAML 和部分 JSON 格式的规则文件，用户可以导入节点、策略组和分流规则。注意文件格式和语法必须符合 Surfboard 规范，否则可能导入失败。<hr />    </div>
@@ -188,7 +153,42 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅更新失败怎么办？</h5></div>
     <div class="panel-body">
-        首先检查订阅 URL 是否有效，再确认网络是否通畅。必要时可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组可保证稳定连接和科学上网体验。    </div>
+        首先检查订阅 URL 是否有效，再确认网络是否通畅。必要时可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组可保证稳定连接和科学上网体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
+    <div class="panel-body">
+        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的日志记录如何帮助排错？</h5></div>
+    <div class="panel-body">
+        WinXray 提供详细的连接日志，包括入站、出站流量信息及错误提示。通过查看日志，用户可以快速定位连接失败、节点不可达或配置错误的原因，提高问题解决效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 的 Web Dashboard 有哪些功能？</h5></div>
+    <div class="panel-body">
+        Mihomo 的 Web 控制面板允许用户可视化管理节点、分流规则、日志查看与系统状态监控。可通过浏览器访问 Dashboard 地址进行远程管理，方便多设备统一控制。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的自定义规则组能实现哪些功能？</h5></div>
+    <div class="panel-body">
+        Clash 的自定义规则组允许用户将多个节点和策略组合，通过优先级和条件分流流量。这样可以根据网站类别或流量类型自动选择最优节点，提高网络效率和使用体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 的节点分组管理有哪些优势？</h5></div>
+    <div class="panel-body">
+        节点分组可按用途、地区或延迟分类，结合策略组实现自动分流。方便用户管理大量节点，快速选择最佳节点，提高访问速度和连接稳定性，同时优化维护效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的节点订阅更新是否可定时执行？</h5></div>
+    <div class="panel-body">
+        是的。Nekoray 可以设置订阅更新频率，如每天或每小时。程序会自动下载更新节点并替换旧节点，保证用户始终使用最新线路。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -217,16 +217,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-9-clash-node-daily-updates.htm" title="「11月9日」最高速度20.1M/S，2025年SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点每天更新免费节点订阅链接">「11月9日」最高速度20.1M/S，2025年SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-clash-node-daily-updates.htm" title="「10月15日」最高速度21.9M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点每天更新免费节点订阅链接">「10月15日」最高速度21.9M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-high-speed-nodes.htm" title="「12月2日」最高速度18.7M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点每天更新免费节点订阅链接">「12月2日」最高速度18.7M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-15-clash-windows.htm" title="「11月15日」最高速度19M/S，2025年Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点每天更新免费节点订阅链接">「11月15日」最高速度19M/S，2025年Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-clash.htm" title="「11月8日」最高速度21.3M/S，2025年Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点每天更新免费节点订阅链接">「11月8日」最高速度21.3M/S，2025年Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-node-share.htm" title="「11月7日」最高速度20.9M/S，2025年SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点每天更新免费节点订阅链接">「11月7日」最高速度20.9M/S，2025年SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-29-free-subscribe-node.htm" title="「11月29日」最高速度19.7M/S，2025年V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点每天更新免费节点订阅链接">「11月29日」最高速度19.7M/S，2025年V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-clash-windows.htm" title="「11月20日」最高速度18.4M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点每天更新免费节点订阅链接">「11月20日」最高速度18.4M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-23-free-node-subscribe.htm" title="「11月23日」最高速度22.7M/S，2025年V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点每天更新免费节点订阅链接">「11月23日」最高速度22.7M/S，2025年V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点每天更新免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-11-clash-v2ray-ss-ssr.htm" title="「11月11日」最高速度19.8M/S，2025年Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点每天更新免费节点订阅链接">「11月11日」最高速度19.8M/S，2025年Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-free-clash-subscribe.htm" title="「11月4日」最高速度18.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点每天更新免费节点订阅链接">「11月4日」最高速度18.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-clash-node.htm" title="「10月12日」最高速度18.5M/S，2025年V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点每天更新免费节点订阅链接">「10月12日」最高速度18.5M/S，2025年V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-3-free-node-subscribe.htm" title="「10月3日」最高速度23M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点每天更新免费节点订阅链接">「10月3日」最高速度23M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-free-node-subscribe-links.htm" title="「10月27日」最高速度20.9M/S，2025年Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点每天更新免费节点订阅链接">「10月27日」最高速度20.9M/S，2025年Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-3-free-ssr-node.htm" title="「11月3日」最高速度22.3M/S，2025年SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点每天更新免费节点订阅链接">「11月3日」最高速度22.3M/S，2025年SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-22-free-clash-subscribe.htm" title="「10月22日」最高速度21.4M/S，2025年V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点每天更新免费节点订阅链接">「10月22日」最高速度21.4M/S，2025年V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-clash-node.htm" title="「11月2日」最高速度20.6M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点每天更新免费节点订阅链接">「11月2日」最高速度20.6M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-clash-v2ray-ss-ssr.htm" title="「11月10日」最高速度20.9M/S，2025年V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点每天更新免费节点订阅链接">「11月10日」最高速度20.9M/S，2025年V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe-links.htm" title="「11月14日」最高速度21.9M/S，2025年Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点每天更新免费节点订阅链接">「11月14日」最高速度21.9M/S，2025年Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点每天更新免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -238,10 +238,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
