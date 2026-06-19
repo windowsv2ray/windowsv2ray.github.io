@@ -1,4 +1,4 @@
-# 「6月12日」最高速度18M/S，2025年Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/SSR节点每天更新免费节点订阅链接  更新时间 2026-06-12 08:50:13
+# 「6月19日」最高速度19M/S，2025年SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点每天更新免费节点订阅链接  更新时间 2026-06-19 09:04:30
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://windowsv2ray.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://windowsv2ray.github.io/uploads/2026/06/0-20260612.yaml
-- https://windowsv2ray.github.io/uploads/2026/06/1-20260612.yaml
-- https://windowsv2ray.github.io/uploads/2026/06/2-20260612.yaml
-- https://windowsv2ray.github.io/uploads/2026/06/3-20260612.yaml
-- https://windowsv2ray.github.io/uploads/2026/06/4-20260612.yaml
+- https://windowsv2ray.github.io/uploads/2026/06/0-20260619.yaml
+- https://windowsv2ray.github.io/uploads/2026/06/1-20260619.yaml
+- https://windowsv2ray.github.io/uploads/2026/06/2-20260619.yaml
+- https://windowsv2ray.github.io/uploads/2026/06/3-20260619.yaml
+- https://windowsv2ray.github.io/uploads/2026/06/4-20260619.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://windowsv2ray.github.io/uploads/2026/06/0-20260612.txt
-- https://windowsv2ray.github.io/uploads/2026/06/1-20260612.txt
-- https://windowsv2ray.github.io/uploads/2026/06/2-20260612.txt
-- https://windowsv2ray.github.io/uploads/2026/06/3-20260612.txt
-- https://windowsv2ray.github.io/uploads/2026/06/4-20260612.txt
+- https://windowsv2ray.github.io/uploads/2026/06/0-20260619.txt
+- https://windowsv2ray.github.io/uploads/2026/06/1-20260619.txt
+- https://windowsv2ray.github.io/uploads/2026/06/2-20260619.txt
+- https://windowsv2ray.github.io/uploads/2026/06/3-20260619.txt
+- https://windowsv2ray.github.io/uploads/2026/06/4-20260619.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://windowsv2ray.github.io/uploads/2026/06/20260612.json
+- https://windowsv2ray.github.io/uploads/2026/06/20260619.json
 
 ## 更多Clash节点订阅 ：
 
