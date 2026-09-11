@@ -279,18 +279,9 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/free-subscribe-node-2026-9-3.htm">「9月3日」最高速度18.9M/S，2025年V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点每天更新免费节点订阅链接</a></p>
+        <p>下一个：<a href="/free-nodes/free-subscribe-node-2026-9-5.htm">「9月5日」最高速度22.8M/S，2025年V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点每天更新免费节点订阅链接</a></p>
     </div>
 <h4>FAQ</h4>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 模式如何隐藏流量特征？</h5></div>
-    <div class="panel-body">
-        Reality 模式通过伪装握手和真实网站特征，使流量难以被 DPI 检测。结合策略组使用，可有效隐藏节点通信特征，同时保持安全和高速传输，适合高封锁环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
-    <div class="panel-body">
-        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
-</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 如何实现 UDP 游戏加速？</h5></div>
     <div class="panel-body">
@@ -302,14 +293,9 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
         合理组织规则顺序，将更具体的规则放在前面，通配规则放在末尾；使用 rule-providers 分离不同来源的规则，避免重复条目，并在变更后使用日志或 debug 模式检验分流是否按预期生效。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
+    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
     <div class="panel-body">
-        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 如何实现按端口和协议分流？</h5></div>
-    <div class="panel-body">
-        QuantumultX 支持按 TCP、UDP、端口及应用协议分流流量，结合策略组选择最优节点。这样可以为游戏、视频和广告屏蔽提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
+        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 的内置延迟测试为什么与系统 ping 不同？</h5></div>
@@ -317,9 +303,19 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
         客户端的延迟测试通常基于 TCP 或特定探测包，而系统 ping 使用 ICMP，两者网络路径与优先级可能不同。此外，防火墙或服务器对 ICMP 的响应可能被限制，导致测试结果存在差异。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 是否支持多订阅源？</h5></div>
+    <div class="panel-heading"><h5>Mellow 是否支持 IPv6 流量代理？</h5></div>
     <div class="panel-body">
-        支持。用户可导入多个订阅 URL，每个订阅源独立管理。通过切换订阅源或合并策略组，可灵活管理节点，实现不同地区或用途的线路分配。<hr />    </div>
+        Mellow 支持 IPv6，只需在配置文件中启用 IPv6 DNS 解析并确认操作系统开启 IPv6 路由功能。部分节点若不支持 IPv6，则相关请求会自动回退到 IPv4，保证兼容性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 如何实现按端口和协议分流？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持按 TCP、UDP、端口及应用协议分流流量，结合策略组选择最优节点。这样可以为游戏、视频和广告屏蔽提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + Reality 模式如何隐藏流量特征？</h5></div>
+    <div class="panel-body">
+        Reality 模式通过伪装握手和真实网站特征，使流量难以被 DPI 检测。结合策略组使用，可有效隐藏节点通信特征，同时保持安全和高速传输，适合高封锁环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在高并发环境中表现如何？</h5></div>
@@ -327,9 +323,14 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
         XTLS 模式减少握手和加密开销，提高吞吐量和 CPU 利用率。在高并发环境下，能够保持连接稳定，适合游戏、视频和高频请求的网络场景，提高整体性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 是否支持 IPv6 流量代理？</h5></div>
+    <div class="panel-heading"><h5>WinXray 是否支持多订阅源？</h5></div>
     <div class="panel-body">
-        Mellow 支持 IPv6，只需在配置文件中启用 IPv6 DNS 解析并确认操作系统开启 IPv6 路由功能。部分节点若不支持 IPv6，则相关请求会自动回退到 IPv4，保证兼容性。    </div>
+        支持。用户可导入多个订阅 URL，每个订阅源独立管理。通过切换订阅源或合并策略组，可灵活管理节点，实现不同地区或用途的线路分配。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
+    <div class="panel-body">
+        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -377,16 +378,16 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-27.htm" title="「8月27日」最高速度21.2M/S，2025年Clash节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点每天更新免费节点订阅链接">「8月27日」最高速度21.2M/S，2025年Clash节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-8-13.htm" title="「8月13日」最高速度22.2M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点每天更新免费节点订阅链接">「8月13日」最高速度22.2M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-17.htm" title="「8月17日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点每天更新免费节点订阅链接">「8月17日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-23.htm" title="「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接">「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-8-11.htm" title="「8月11日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接">「8月11日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-clash-node-daily-updates.htm" title="「8月22日」最高速度19.9M/S，2025年V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点每天更新免费节点订阅链接">「8月22日」最高速度19.9M/S，2025年V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-24-node-share.htm" title="「8月24日」最高速度21.1M/S，2025年V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点每天更新免费节点订阅链接">「8月24日」最高速度21.1M/S，2025年V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-21.htm" title="「8月21日」最高速度18.1M/S，2025年SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费节点订阅链接">「8月21日」最高速度18.1M/S，2025年SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-8-7.htm" title="「8月7日」最高速度21.7M/S，2025年Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接">「8月7日」最高速度21.7M/S，2025年Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-node-share.htm" title="「8月14日」最高速度21.9M/S，2025年Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点每天更新免费节点订阅链接">「8月14日」最高速度21.9M/S，2025年Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点每天更新免费节点订阅链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-8-25.htm" title="「8月25日」最高速度22.1M/S，2025年Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费节点订阅链接">「8月25日」最高速度22.1M/S，2025年Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-shadowrocket-node.htm" title="「8月8日」最高速度20.8M/S，2025年Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点每天更新免费节点订阅链接">「8月8日」最高速度20.8M/S，2025年Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-23.htm" title="「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接">「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-shadowrocket-node.htm" title="「8月10日」最高速度20.5M/S，2025年Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点每天更新免费节点订阅链接">「8月10日」最高速度20.5M/S，2025年Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-17.htm" title="「8月17日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点每天更新免费节点订阅链接">「8月17日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-clash-v2ray-ss-ssr.htm" title="「8月28日」最高速度19.6M/S，2025年V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点每天更新免费节点订阅链接">「8月28日」最高速度19.6M/S，2025年V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-shadowrocket-node.htm" title="「8月18日」最高速度19.1M/S，2025年SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点每天更新免费节点订阅链接">「8月18日」最高速度19.1M/S，2025年SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-7.htm" title="「9月7日」最高速度19.9M/S，2025年V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点每天更新免费节点订阅链接">「9月7日」最高速度19.9M/S，2025年V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-8-29.htm" title="「8月29日」最高速度18.6M/S，2025年Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接">「8月29日」最高速度18.6M/S，2025年Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -398,10 +399,10 @@ A4：在不同时间段测试速度，如果本地测速正常，但代理速度
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>

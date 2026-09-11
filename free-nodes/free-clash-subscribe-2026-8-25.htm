@@ -301,19 +301,29 @@ Quantumult有多个版本，例如Quantumult 和 Quantumult X，选择符合自�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
+    <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
     <div class="panel-body">
-        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
+        通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用在短连接中优势是什么？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的 TLS 配置如何增强抗封锁能力？</h5></div>
     <div class="panel-body">
-        多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，提升吞吐量和连接稳定性，优化网络体验。<hr />    </div>
+        TLS 配置可将流量伪装成正常 HTTPS 请求，隐藏真实数据特征。结合域名伪装、WebSocket 或 QUIC 等传输方式，可有效绕过封锁，提高节点长期可用性和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
     <div class="panel-body">
         TUN 模式拦截系统 IP 层流量，实现全局代理，而系统代理通常只影响支持代理的应用。TUN 更适合游戏、视频和全局科学上网场景，保证所有流量通过节点，提高稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据传输安全？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境中保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用在短连接中优势是什么？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，提升吞吐量和连接稳定性，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
@@ -326,29 +336,19 @@ Quantumult有多个版本，例如Quantumult 和 Quantumult X，选择符合自�
         Matsuri 会定期测速节点延迟，通过策略组自动选择低延迟、高稳定性的节点处理不同流量。无需手动切换，确保网页浏览、视频播放和游戏访问顺畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
-    <div class="panel-body">
-        通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 TLS 配置如何增强抗封锁能力？</h5></div>
-    <div class="panel-body">
-        TLS 配置可将流量伪装成正常 HTTPS 请求，隐藏真实数据特征。结合域名伪装、WebSocket 或 QUIC 等传输方式，可有效绕过封锁，提高节点长期可用性和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>为什么某些网站在通过代理后登录会频繁要求二次验证？</h5></div>
     <div class="panel-body">
         代理会改变访问 IP 与地理位置，目标站点可能检测到异常登录并触发验证码或二次验证。建议对常用账户使用白名单 IP 或在代理配置中对特定站点设置直连来避免频繁验证。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据传输安全？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境中保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
     <div class="panel-body">
-        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。    </div>
+        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
+    <div class="panel-body">
+        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -396,16 +396,16 @@ Quantumult有多个版本，例如Quantumult 和 Quantumult X，选择符合自�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-8-11.htm" title="「8月11日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接">「8月11日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-node-share.htm" title="「8月14日」最高速度21.9M/S，2025年Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点每天更新免费节点订阅链接">「8月14日」最高速度21.9M/S，2025年Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-1.htm" title="「9月1日」最高速度19.4M/S，2025年Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Clash节点每天更新免费节点订阅链接">「9月1日」最高速度19.4M/S，2025年Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-23.htm" title="「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接">「8月23日」最高速度20.4M/S，2025年V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="「9月4日」最高速度19.3M/S，2025年Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点每天更新免费节点订阅链接">「9月4日」最高速度19.3M/S，2025年Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-shadowrocket-node.htm" title="「8月10日」最高速度20.5M/S，2025年Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点每天更新免费节点订阅链接">「8月10日」最高速度20.5M/S，2025年Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-31.htm" title="「8月31日」最高速度21.3M/S，2025年Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点每天更新免费节点订阅链接">「8月31日」最高速度21.3M/S，2025年Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-9.htm" title="「8月9日」最高速度18.4M/S，2025年V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点每天更新免费节点订阅链接">「8月9日」最高速度18.4M/S，2025年V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-node-share-links.htm" title="「7月23日」最高速度21.6M/S，2025年Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点每天更新免费节点订阅链接">「7月23日」最高速度21.6M/S，2025年Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-clash-node-daily-updates.htm" title="「8月22日」最高速度19.9M/S，2025年V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点每天更新免费节点订阅链接">「8月22日」最高速度19.9M/S，2025年V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-shadowrocket-node.htm" title="「8月16日」最高速度20M/S，2025年V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点每天更新免费节点订阅链接">「8月16日」最高速度20M/S，2025年V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-clash-v2ray-ss-ssr.htm" title="「8月12日」最高速度19.9M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点每天更新免费节点订阅链接">「8月12日」最高速度19.9M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-24-node-share.htm" title="「8月24日」最高速度21.1M/S，2025年V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点每天更新免费节点订阅链接">「8月24日」最高速度21.1M/S，2025年V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/Singbox节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-clash.htm" title="「8月6日」最高速度19.8M/S，2025年Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接">「8月6日」最高速度19.8M/S，2025年Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-15.htm" title="「8月15日」最高速度20.8M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点每天更新免费节点订阅链接">「8月15日」最高速度20.8M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点每天更新免费节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-19-free-high-speed-nodes.htm" title="「7月19日」最高速度21.4M/S，2025年Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接">「7月19日」最高速度21.4M/S，2025年Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-8-free-shadowrocket-node.htm" title="「8月8日」最高速度20.8M/S，2025年Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点每天更新免费节点订阅链接">「8月8日」最高速度20.8M/S，2025年Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点每天更新免费节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-8-29.htm" title="「8月29日」最高速度18.6M/S，2025年Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接">「8月29日」最高速度18.6M/S，2025年Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点每天更新免费节点订阅链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -417,10 +417,10 @@ Quantumult有多个版本，例如Quantumult 和 Quantumult X，选择符合自�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
